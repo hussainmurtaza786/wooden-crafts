@@ -1,7 +1,15 @@
-import { Box } from "@chakra-ui/react";
+"use client"
+import HeroSection from "./components/HeroSection";
+import ExpertiseSection from "./components/Expertise";
+import Vision from "./components/Vision";
+
 
 export default function HomePage() {
     return (
-        <Box></Box>
-    )
+        <>
+            <HeroSection />
+            <ExpertiseSection />
+            <Vision />
+        </>
+    );
 }

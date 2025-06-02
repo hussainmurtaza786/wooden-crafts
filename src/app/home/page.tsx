@@ -2,6 +2,6 @@ import { Box } from "@chakra-ui/react";
 
 export default function HomePage() {
     return (
-        <Box>Home Page</Box>
+        <Box></Box>
     )
 }

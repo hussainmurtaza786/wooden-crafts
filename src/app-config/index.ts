@@ -14,17 +14,17 @@ export const PAGES = {
     Contact: { title: "Contact Us", path: "/contact", },
     Catalog: { title: "Catalog", path: "/catalog", },
     Shop: { title: "Shop", path: "/shop", },
-    Gallery: { title: "Gallery", path: "/gallery", },
 
 }
 export const HEADER_LINKS = [
-    PAGES.About, PAGES.Gallery, PAGES.Shop, PAGES.Catalog,
+    PAGES.About, PAGES.Catalog, PAGES.Shop, PAGES.Contact
 ]
 export const FOOTER_LINKS = [
-    PAGES.About, PAGES.Gallery, PAGES.Shop, PAGES.Catalog, PAGES.Contact
+    PAGES.About, PAGES.Shop, PAGES.Catalog, PAGES.Contact
 ]
 
 export const CONTACT = {
-    phone: "",
-    email: "",
+    phone: "+92 331 2293684",
+    email: "example@hotmail.com",
+    shopNo:"Manzor Colony Karachi ,Pakistan"
 }

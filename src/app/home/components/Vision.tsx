@@ -1,3 +1,4 @@
+'use client'
 /** @jsxImportSource @emotion/react */
 import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
 import { css, keyframes } from "@emotion/react";
@@ -34,7 +35,7 @@ export default function Vision() {
 
     return (
         <Box ref={sectionRef} px={4} py={16} bg="gray.50">
-            <Heading
+            <Heading opacity={animate ? 1 : 0}
                 css={
                     animate
                         ? css`
@@ -45,7 +46,7 @@ export default function Vision() {
                 Bring Your Vision to Life
             </Heading>
 
-            <Text
+            <Text opacity={animate ? 1 : 0}
                 css={
                     animate
                         ? css`
@@ -66,7 +67,7 @@ export default function Vision() {
 
             <Flex direction={{ base: "column", md: "row" }} gap={6} justify="center" align="center" flexWrap="wrap">
                 {Data.map((item, idx) => (
-                    <Box key={idx} p={6} w={{ base: "100%", sm: "80%", md: "30%" }} bg="white" borderRadius="xl" boxShadow="lg" textAlign="center" color="gray.800" fontWeight="semibold" transition="transform 0.3s ease, box-shadow 0.3s ease" _hover={{ transform: "scale(1.05)", boxShadow: "2xl", }}
+                    <Box opacity={animate ? 1 : 0} key={idx} p={6} w={{ base: "100%", sm: "80%", md: "30%" }} bg="white" borderRadius="xl" boxShadow="lg" textAlign="center" color="gray.800" fontWeight="semibold" transition="transform 0.3s ease, box-shadow 0.3s ease" _hover={{ transform: "scale(1.05)", boxShadow: "2xl", }}
                         css={
                             animate
                                 ? css`

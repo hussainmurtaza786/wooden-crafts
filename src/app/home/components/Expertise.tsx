@@ -38,7 +38,7 @@ export default function ExpertiseSection() {
 
     return (
         <Box ref={sectionRef} bg="#f7f3ef" py={16} px={{ base: 4, md: 16 }}>
-            <VStack
+            <VStack opacity={animate ? 1 : 0}
                 css={
                     animate
                         ? css`

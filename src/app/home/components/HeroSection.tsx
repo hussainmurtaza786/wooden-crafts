@@ -60,7 +60,7 @@ export default function HeroSection() {
             <Flex direction="column" gap={{ base: "14", lg: "0" }} px="5" py="10">
 
                 <Flex direction={{ base: "column-reverse", md: "column-reverse", lg: "row" }} justify="center" align="center" gap={{ base: "5", lg: "12" }}  >
-                    <Flex
+                    <Flex opacity={animate ? 1 : 0}
                         css={
                             animate
                                 ? css`
@@ -76,7 +76,7 @@ export default function HeroSection() {
                             </Box>
                         </Flex>
                     </Flex>
-                    <Box css={
+                    <Box opacity={animate ? 1 : 0} css={
                         animate
                             ? css`
                               animation: ${slideInFromRight} 1s ease-out forwards;
@@ -88,7 +88,7 @@ export default function HeroSection() {
                     </Box>
                 </Flex>
                 <Flex direction={{ base: "column", md: "column", lg: "row" }} justify="center" align="center" gap={{ base: "5", lg: "14" }}>
-                    <Box
+                    <Box opacity={animate ? 1 : 0}
                         css={
                             animate
                                 ? css`
@@ -98,7 +98,7 @@ export default function HeroSection() {
                         }>
                         <Image w="100%" maxW="540px" minW="300px" minH="300px" src="/assets/guitor.jpeg" />
                     </Box>
-                    <Flex
+                    <Flex opacity={animate ? 1 : 0}
                         css={
                             animate
                                 ? css`
@@ -122,23 +122,3 @@ export default function HeroSection() {
 
 
 
-
-
-// css={
-//                         animate
-//                             ? css`
-//                               animation: ${slideInFromLeft} 1s ease-out forwards;
-//                           `
-//                             : undefined
-//                     }
-
-
-//   <Heading mb={4} fontSize="3xl" fontWeight="bolder">
-//                         Every grain tells a story.
-//                     </Heading>
-//                     <Text mb={4} fontSize="xl">
-//                         Discover unique wooden creations where each piece is a natural masterpiece.
-//                     </Text>
-//                     <Button p={3} fontWeight="bold" bgColor="transparent" border="1px solid black" _hover={{ bgColor: "lightgrey", transition: "0.3s ease-in-out" }}>
-//                         View More Products
-//                     </Button>

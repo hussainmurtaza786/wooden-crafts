@@ -7,7 +7,7 @@ import { FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
     return (
-        <Flex bgGradient="to-br" gradientFrom="#006600" gradientTo="white" p={10} gap={12} direction={{base:"column",md:"row"}}>
+        <Flex color="white" bgColor="rgba(35,57,44,1)" p={10} gap={12} direction={{ base: "column", md: "row" }}>
 
             <Box flex={1}>
                 <Heading mb={4} fontSize="20px" fontWeight="bolder">Wooden Crafts</Heading>
@@ -37,10 +37,12 @@ export default function Footer() {
             </Box>
             <Box flex={1}>
                 <Heading mb={4} fontSize="20px" fontWeight="bolder">Kind Message</Heading>
-                <Text>Message us for any query related to design or material</Text>
+                <Text mb={3}>Message us for any query related to design or material</Text>
                 <form >
                     <Textarea mb={2} border="1px solid lightgrey" rows={3} />
-                    <Button w='100%' fontWeight="bold" bgColor='#bea79d' _hover={{bgColor:"#907b72"}}>Submit</Button>
+                    <Button type="submit" w="full" bg="rgba(255,255,255,0.1)" color="white" border="1px solid rgba(255,255,255,0.3)" borderRadius="lg" _hover={{ bg: "rgba(255,255,255,0.2)" }} >
+                        Submit
+                    </Button>
                 </form>
             </Box>
 

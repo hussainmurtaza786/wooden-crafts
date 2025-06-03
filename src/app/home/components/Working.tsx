@@ -1,3 +1,4 @@
+'use client'
 /** @jsxImportSource @emotion/react */
 import { Box, Heading, Text, VStack, Flex, Circle } from "@chakra-ui/react";
 import { css, keyframes } from "@emotion/react";

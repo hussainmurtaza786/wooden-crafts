@@ -7,7 +7,7 @@ import { FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
     return (
-        <Flex bgColor="#17be17" p={10} gap={12} direction={{base:"column",md:"row"}}>
+        <Flex bgGradient="to-br" gradientFrom="#006600" gradientTo="white" p={10} gap={12} direction={{base:"column",md:"row"}}>
 
             <Box flex={1}>
                 <Heading mb={4} fontSize="20px" fontWeight="bolder">Wooden Crafts</Heading>

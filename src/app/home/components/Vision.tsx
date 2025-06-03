@@ -34,11 +34,25 @@ export default function Vision() {
 
     return (
         <Box ref={sectionRef} px={4} py={16} bg="gray.50">
-            <Heading fontSize={{ base: "2xl", md: "4xl" }} textAlign="center" mb={4} color="#5e3a1c">
+            <Heading
+                css={
+                    animate
+                        ? css`
+                    animation: ${fadeInUp} 0.6s ease-out;
+                  `
+                        : undefined
+                } fontSize={{ base: "2xl", md: "4xl" }} textAlign="center" mb={4} color="#5e3a1c">
                 Bring Your Vision to Life
             </Heading>
 
-            <Text maxW="600px" mx="auto" textAlign="center" mb={8} fontSize="md" color="gray.600"            >
+            <Text
+                css={
+                    animate
+                        ? css`
+                    animation: ${fadeInUp} 0.6s ease-out;
+                  `
+                        : undefined
+                } maxW="600px" mx="auto" textAlign="center" mb={8} fontSize="md" color="gray.600"            >
                 Have a unique idea for a wooden piece? Our master craftsmen can create
                 custom furniture, decorative items, and personalized gifts tailored
                 exactly to your specifications and dreams.

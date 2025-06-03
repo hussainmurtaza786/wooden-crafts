@@ -19,36 +19,31 @@ const fadeInUp = keyframes`
 
 
 export default function ExpertiseSection() {
-    const sectionRef = useRef<HTMLDivElement | null>(null);
+    const sectionRef = useRef<HTMLDivElement>(null);
     const [animate, setAnimate] = useState(false);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setAnimate(true);
-                    observer.disconnect();
-                }
-            },
-            { threshold: 0.2 }
+            ([entry]) => setAnimate(entry.isIntersecting),
+            { threshold: 0.3 }
         );
 
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current);
-        }
+        if (sectionRef.current) observer.observe(sectionRef.current);
 
-        return () => observer.disconnect();
+        return () => {
+            if (sectionRef.current) observer.unobserve(sectionRef.current);
+        };
     }, []);
+
 
     return (
         <Box ref={sectionRef} bg="#f7f3ef" py={16} px={{ base: 4, md: 16 }}>
             <VStack
-                opacity={animate ? 1 : 0}
                 css={
                     animate
                         ? css`
-                    animation: ${fadeInUp} 0.6s ease-out ;
-                  `
+                                  animation: ${fadeInUp} 0.6s ease-out;
+                                `
                         : undefined
                 } textAlign="center" mb={12}>
                 <Heading size="2xl" color="#5e3a1c">

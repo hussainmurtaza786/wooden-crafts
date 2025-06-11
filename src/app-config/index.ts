@@ -13,18 +13,17 @@ export const PAGES = {
     About: { title: "About Us", path: "/about", },
     Contact: { title: "Contact Us", path: "/contact", },
     Catalog: { title: "Catalog", path: "/catalog", },
-    Shop: { title: "Shop", path: "/shop", },
 
 }
 export const HEADER_LINKS = [
-    PAGES.About, PAGES.Catalog, PAGES.Shop, PAGES.Contact
+    PAGES.About, PAGES.Catalog, PAGES.Contact
 ]
 export const FOOTER_LINKS = [
-    PAGES.About, PAGES.Shop, PAGES.Catalog, PAGES.Contact
+    PAGES.About, PAGES.Catalog, PAGES.Contact
 ]
 
 export const CONTACT = {
     phone: "+92 331 2293684",
     email: "example@hotmail.com",
-    shopNo:"Manzor Colony Karachi ,Pakistan"
+    shopNo: "Manzor Colony Karachi ,Pakistan"
 }

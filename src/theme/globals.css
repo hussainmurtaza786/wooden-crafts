@@ -1,5 +1,6 @@
 :root {
-  --black: rgb(63, 63, 63);
+  --white: #fff;
+  background-color: #fff;
 }
 
 * {

@@ -37,7 +37,7 @@ export default function UniqueDesign() {
             ([entry]) => {
                 if (entry.isIntersecting && !animate) {
                     setAnimate(true);
-                    observer.unobserve(entry.target); 
+                    observer.unobserve(entry.target);
                 }
             },
             { threshold: 0.3 }
@@ -56,7 +56,7 @@ export default function UniqueDesign() {
 
 
     return (
-        <Box ref={sectionRef} p={10} w="100%" overflow="hidden">
+        <Box ref={sectionRef} p={10} w="100%" bgColor="white">
             <Flex direction="column" gap={{ base: "14", lg: "0" }} px="5" py="10">
 
                 <Flex direction={{ base: "column-reverse", md: "column-reverse", lg: "row" }} justify="center" align="center" gap={{ base: "5", lg: "12" }}  >
@@ -71,8 +71,11 @@ export default function UniqueDesign() {
 
                         <Heading color="app.blue2" fontWeight="500" fontSize="3xl" lineHeight="40px">Every grain tells a story.</Heading>
                         <Flex mb="4" gap="4" maxW="487px">
-                            <Box minW="full">
-                                <Text fontSize="lg" borderLeft="2px solid black" px="4" lineHeight="40px" fontWeight="400">Discover unique wooden creations where each piece is a natural masterpiece.</Text>
+                            <Box minW="full" borderLeft="2px solid black">
+                                <Text mb={2} fontSize="lg" px="4" lineHeight="40px" fontWeight="400">Discover unique wooden creations where each piece is a natural masterpiece.</Text>
+                                <Button mx={4} bgColor="#5e3a1c" color="white" px={6} py={4} fontSize="md" rounded="md" _hover={{ bg: "#714625" }}>
+                                    Explore the Craft
+                                </Button>
                             </Box>
                         </Flex>
                     </Flex>
@@ -109,13 +112,17 @@ export default function UniqueDesign() {
 
                         <Heading color="app.blue2" fontWeight="500" fontSize="3xl" lineHeight="40px"> Crafted by nature, refined by hand.</Heading>
                         <Flex gap="4" maxW="487px">
-                            <Box minW="300px">
-                                <Text fontSize="lg" borderLeft="2px solid black" px="4" lineHeight="40px" fontWeight="400">Each piece is shaped with passion, preserving the natural beauty of wood in every curve and grain.</Text>
+                            <Box minW="300px" borderLeft="2px solid black">
+                                <Text mb={2} fontSize="lg" px="4" lineHeight="40px" fontWeight="400">Each piece is shaped with passion, preserving the natural beauty of wood in every curve and grain.</Text>
+                                <Button mx={4} bgColor="#5e3a1c" color="white" px={6} py={4} fontSize="md" rounded="md" _hover={{ bg: "#714625" }}>
+                                    Explore Our Legacy
+                                </Button>
                             </Box>
                         </Flex>
                     </Flex>
                 </Flex>
             </Flex>
+
         </Box>
     );
 }

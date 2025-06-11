@@ -9,7 +9,7 @@ import PurposeAndWork from "./components/PurposeAndWorkWith";
 
 
 
-export default function HomePage() {
+export default function AboutPage() {
     return (
         <>
             <AboutBanner />

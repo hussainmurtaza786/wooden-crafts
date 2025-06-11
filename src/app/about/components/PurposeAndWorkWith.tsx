@@ -4,6 +4,29 @@ import { FaHandsHelping, FaBullseye, FaLightbulb, FaStar, FaClock, FaUserCheck }
 export default function PurposeAndWork() {
     return (
         <Box py={{ base: 10, md: 20 }} px={{ base: 4, md: 10 }}>
+
+            <Stack textAlign="center" maxW="4xl" mx="auto">
+                <Heading mb={4} fontSize={{ base: "3xl", md: "4xl" }}>
+                    Why Work With Us?
+                </Heading>
+                <Text maxW="600px" lineHeight="30px" mx="auto" fontSize="lg" color="gray.600">
+                    At our core, we are dedicated to delivering exceptional craftsmanship and innovative designs tailored to meet your unique needs. We combine creativity with precision to ensure every product not only looks stunning but also serves a meaningful purpose in your life or business. Our team values transparency, reliability, and customer satisfaction, working closely with you throughout the process to bring your vision to life. Choosing us means partnering with experts who are passionate about quality, detail, and exceeding expectations — making sure you get more than just a product, but a lasting experience.
+                </Text>
+            </Stack>
+
+            <SimpleGrid mb={16} gap={4} columns={{ base: 1, md: 3 }} mt={16} maxW="6xl" mx="auto">
+                {WhyUs.map((item, idx) => (
+                    <Box key={idx} p={6} rounded="xl" shadow="md" textAlign="center" transition="all 0.3s ease" _hover={{ transform: "translateY(-5px)", shadow: "lg" }}>
+                        {item.icon}
+                        <Heading fontSize="xl" mb={2}> {item.title} </Heading>
+                        <Text color="gray.600" fontSize="md">
+                            {item.description}
+                        </Text>
+                    </Box>
+                ))}
+
+            </SimpleGrid>
+
             <Stack textAlign="center" maxW="4xl" mx="auto">
                 <Heading mb={4} fontSize={{ base: "3xl", md: "4xl" }}>
                     Driven by Purpose
@@ -13,7 +36,7 @@ export default function PurposeAndWork() {
                 </Text>
             </Stack>
 
-            <SimpleGrid mb={16} gap={4} columns={{ base: 1, md: 3 }} mt={16} maxW="6xl" mx="auto">
+            <SimpleGrid gap={4} columns={{ base: 1, md: 3 }} mt={16} maxW="6xl" mx="auto">
                 {Purpose.map((item, idx) => (
                     <Box key={idx} p={6} rounded="xl" shadow="md" textAlign="center" transition="all 0.3s ease" _hover={{ transform: "translateY(-5px)", shadow: "lg" }}>
                         {item.icon}
@@ -26,27 +49,7 @@ export default function PurposeAndWork() {
 
             </SimpleGrid>
 
-            <Stack textAlign="center" maxW="4xl" mx="auto">
-                <Heading mb={4} fontSize={{ base: "3xl", md: "4xl" }}>
-                    Why Work With Us?
-                </Heading>
-                <Text maxW="600px" lineHeight="30px" mx="auto" fontSize="lg" color="gray.600">
-                    At our core, we are dedicated to delivering exceptional craftsmanship and innovative designs tailored to meet your unique needs. We combine creativity with precision to ensure every product not only looks stunning but also serves a meaningful purpose in your life or business. Our team values transparency, reliability, and customer satisfaction, working closely with you throughout the process to bring your vision to life. Choosing us means partnering with experts who are passionate about quality, detail, and exceeding expectations — making sure you get more than just a product, but a lasting experience.
-                </Text>
-            </Stack>
 
-            <SimpleGrid gap={4} columns={{ base: 1, md: 3 }} mt={16} maxW="6xl" mx="auto">
-                {WhyUs.map((item, idx) => (
-                    <Box key={idx} p={6} rounded="xl" shadow="md" textAlign="center" transition="all 0.3s ease" _hover={{ transform: "translateY(-5px)", shadow: "lg" }}>
-                        {item.icon}
-                        <Heading fontSize="xl" mb={2}> {item.title} </Heading>
-                        <Text color="gray.600" fontSize="md">
-                            {item.description}
-                        </Text>
-                    </Box>
-                ))}
-
-            </SimpleGrid>
         </Box>
     );
 }
@@ -71,19 +74,19 @@ const Purpose = [
 ]
 
 const WhyUs = [
-  {
-    icon: <FaStar size={40} color="#3182ce" style={{ margin: "0 auto 16px" }} />,
-    title: " Quality & Creativity",
-    description: "Each design is crafted with attention to detail, aesthetics, and functionality using premium materials and artistic flair."
-  },
-  {
-    icon: <FaClock size={40} color="#3182ce" style={{ margin: "0 auto 16px" }} />,
-    title: " Timely Delivery",
-    description: "  We value your time. Every project is managed efficiently to meet deadlines without compromising on quality."
-  },
-  {
-    icon: <FaUserCheck size={40} color="#3182ce" style={{ margin: "0 auto 16px" }} />,
-    title: " Client Satisfaction",
-    description: "   Your happiness is our priority. We listen, understand, and work closely with you to bring your ideas to life."
-  },
+    {
+        icon: <FaStar size={40} color="#3182ce" style={{ margin: "0 auto 16px" }} />,
+        title: " Quality & Creativity",
+        description: "Each design is crafted with attention to detail, aesthetics, and functionality using premium materials and artistic flair."
+    },
+    {
+        icon: <FaClock size={40} color="#3182ce" style={{ margin: "0 auto 16px" }} />,
+        title: " Timely Delivery",
+        description: "  We value your time. Every project is managed efficiently to meet deadlines without compromising on quality."
+    },
+    {
+        icon: <FaUserCheck size={40} color="#3182ce" style={{ margin: "0 auto 16px" }} />,
+        title: " Client Satisfaction",
+        description: "   Your happiness is our priority. We listen, understand, and work closely with you to bring your ideas to life."
+    },
 ]

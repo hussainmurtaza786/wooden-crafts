@@ -12,8 +12,7 @@ export default function HeroSection() {
                     <Heading as="h1" size="2xl" fontWeight="semibold" color="gray.800">
                         Crafting timeless beauty from nature’s finest wood.
                     </Heading>
-
-                    <Button bgColor="orange" size="lg" maxW="200px" _hover={{ bg: "orange.600" }}>
+                    <Button mx={4} bgColor="#5e3a1c" color="white" px={6} py={4} fontSize="md" rounded="md" _hover={{ bg: "#714625" }}>
                         Discover Our Collection
                     </Button>
                 </Stack>

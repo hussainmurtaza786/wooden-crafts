@@ -3,6 +3,13 @@ import { useEffect } from "react";
 
 const ChatBot = () => {
   useEffect(() => {
+
+    Object.keys(localStorage).forEach((key) => {
+      if (key.startsWith("bp:webchat::")) {
+        localStorage.removeItem(key);
+      }
+    });
+
     const isLoaded = (src: string) => {
       return !!document.querySelector(`script[src="${src}"]`);
     };

@@ -1,12 +1,13 @@
 
 import { createSystem, defaultConfig, defineConfig, } from '@chakra-ui/react';
 import { breakpoints } from './config';
-// import { Poppins } from 'next/font/google';
+import { Alice } from 'next/font/google';
 
 export { breakpoints }
 
 
 // const poppins = Poppins({ subsets: ['latin'], weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'], style: ['italic', 'normal'] });
+const alice = Alice({ subsets: ['latin'], weight: ['400'], });
 
 const config = defineConfig({
     theme: {
@@ -23,6 +24,7 @@ const config = defineConfig({
             },
             fonts: {
                 // poppins: { value: poppins.style.fontFamily },
+                alice: { value: alice.style.fontFamily },
 
             }
 

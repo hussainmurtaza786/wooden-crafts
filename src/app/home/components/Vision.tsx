@@ -4,6 +4,8 @@ import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
 import { css, keyframes } from "@emotion/react";
 import { FaHammer, FaRegHeart, FaRegStar } from "react-icons/fa";
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import { PAGES } from "@/app-config";
 
 const fadeInUp = keyframes`
   from {
@@ -60,9 +62,11 @@ export default function Vision() {
             </Text>
 
             <Flex justify="center" mb={12}>
-                <Button bgColor="#5e3a1c" color="white" px={6} py={4} fontSize="md" rounded="md" _hover={{ bg: "#714625" }}>
-                    See Our Process
-                </Button>
+                <Link href={PAGES.About.path}>
+                    <Button bgColor="#5e3a1c" color="white" px={6} py={4} fontSize="md" rounded="md" _hover={{ bg: "#714625" }}>
+                        See Our Process
+                    </Button>
+                </Link>
             </Flex>
 
             <Flex direction={{ base: "column", md: "row" }} gap={6} justify="center" align="center" flexWrap="wrap">

@@ -10,14 +10,6 @@ import ChatBot from "@/app/ChatBot";
 import Script from "next/script";
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
-    useEffect(() => {
-        // Clear previous Botpress chat history
-        Object.keys(localStorage).forEach((key) => {
-            if (key.startsWith("bp:webchat::")) {
-                localStorage.removeItem(key);
-            }
-        });
-    }, []);
     return (
         <html lang="en" suppressHydrationWarning>
             <head>

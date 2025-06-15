@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 'use client';
 
-import { Box, Heading, SimpleGrid, Text, VStack } from '@chakra-ui/react';
+import { Box, Flex, Heading, SimpleGrid, Text, VStack } from '@chakra-ui/react';
 import { css, keyframes } from '@emotion/react';
 import { useEffect, useRef, useState } from 'react';
 
@@ -37,40 +37,42 @@ export default function ExpertiseSection() {
 
 
     return (
-        <Box ref={sectionRef} bg="#f7f3ef" py={16} px={{ base: 4, md: 16 }}>
-            <VStack opacity={animate ? 1 : 0}
-                css={
-                    animate
-                        ? css`
-                                  animation: ${fadeInUp} 0.6s ease-out;
-                                `
-                        : undefined
-                } textAlign="center" mb={12}>
-                <Heading size="2xl" color="#5e3a1c">
-                    Our Expertise
-                </Heading>
-                <Text fontSize="lg" color="gray.600" maxW="600px" mt={4}>
-                    Masterfully crafted wooden creations designed with precision, passion, and timeless artistry.
-                </Text>
-            </VStack>
-
-            <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} gap={5}>
-                {expertiseItems.map((item, index) => (
-                    <Box cursor="pointer" _hover={{ shadow: "2xl" }} key={index} p={6} bg="white" borderRadius="xl" boxShadow="lg" color="gray.800" fontWeight="semibold" fontSize="lg" textAlign="center" opacity={animate ? 1 : 0}
+        <Flex justifyContent="center" alignItems="center">
+            <Box maxW="1440px" ref={sectionRef} bg="#f7f3ef" py={16} px={{ base: 4, md: 16 }}>
+                <VStack textAlign="center" mb={12}>
+                    <Heading fontFamily="alice" size="5xl" color="#5e3a1c">
+                        Our Expertise
+                    </Heading>
+                    <Text opacity={animate ? 1 : 0}
                         css={
                             animate
                                 ? css`
+                                  animation: ${fadeInUp} 0.6s ease-out;
+                                `
+                                : undefined
+                        } fontSize="lg" color="gray.600" maxW="600px" mt={4}>
+                        Masterfully crafted wooden creations designed with precision, passion, and timeless artistry.
+                    </Text>
+                </VStack>
+
+                <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} gap={5}>
+                    {expertiseItems.map((item, index) => (
+                        <Box cursor="pointer" _hover={{ shadow: "2xl" }} key={index} py="10" px="8" bg="white" borderRadius="xl" boxShadow="lg" color="gray.800" fontWeight="semibold" fontSize="lg" textAlign="center" opacity={animate ? 1 : 0}
+                            css={
+                                animate
+                                    ? css`
                     animation: ${fadeInUp} 0.6s ease-out ${index * 0.1}s both;
                   `
-                                : undefined
-                        }
-                    >
-                        <Heading fontSize="md" fontWeight="bold">{item.title}</Heading>
-                        <Text fontSize="xs">{item.description}</Text>
-                    </Box>
-                ))}
-            </SimpleGrid>
-        </Box>
+                                    : undefined
+                            }
+                        >
+                            <Heading fontSize="lg" fontWeight="bold">{item.title}</Heading>
+                            <Text fontSize="sm">{item.description}</Text>
+                        </Box>
+                    ))}
+                </SimpleGrid>
+            </Box>
+        </Flex>
     );
 };
 

@@ -4,12 +4,14 @@ import Working from "./components/Working";
 import ContactPage from "./components/ContactPage";
 import UniqueDesign from "./components/UniqueDesign";
 import HeroSection from "./components/HeroSection";
+import FeaturedProduct from "./components/FeaturedProduct";
 
 
 export default function HomePage() {
     return (
         <>
             <HeroSection />
+            <FeaturedProduct />
             <ExpertiseSection />
             <UniqueDesign />
             <Vision />

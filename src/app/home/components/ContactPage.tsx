@@ -30,7 +30,7 @@ export default function ContactPage() {
             </Box>
 
             {/* Form Section */}
-            <Box px={4} maxW="600px" mx="auto" pt={{ base: 20, md: 32 }} >
+            <Box py={14} px={4} maxW="600px" mx="auto" pt={{ base: 20, md: 32 }} >
                 <Heading fontSize="3xl" fontFamily="poppins" textAlign="center" mb={8} color="white" fontWeight="bold">
                     Let’s Connect
                 </Heading>

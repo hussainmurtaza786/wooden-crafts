@@ -37,14 +37,7 @@ export default function Vision() {
 
     return (
         <Box ref={sectionRef} px={4} py={16} bg="gray.50">
-            <Heading opacity={animate ? 1 : 0}
-                css={
-                    animate
-                        ? css`
-                    animation: ${fadeInUp} 0.6s ease-out;
-                  `
-                        : undefined
-                } fontSize={{ base: "2xl", md: "4xl" }} textAlign="center" mb={4} color="#5e3a1c">
+            <Heading fontSize="5xl" fontFamily="alice" textAlign="center" mb={10} color="#5e3a1c">
                 Bring Your Vision to Life
             </Heading>
 

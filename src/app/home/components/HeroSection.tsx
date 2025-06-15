@@ -24,16 +24,16 @@ export default function HeroSection() {
         return () => clearTimeout(timeout);
     }, []);
     return (
-        <Flex w="100%" pos="relative" align="center" justify="center" px={0} bg="gray.50" gap={0} flexWrap={{ base: "wrap", md: "nowrap" }}>
-            <Box bgColor="black" >
-                <Image opacity={0.7} w="full" h="full" src="/assets/home-banner.png" alt="Wooden Craft Art" />
+        <Flex w="100%" pos="relative" align="center" justify="center" bg="gray.50" flexWrap={{ base: "wrap", md: "nowrap" }}>
+            <Box bgColor="black" w="100%" h="100%" >
+                <Image opacity={0.7} w="100%" h="100%" src="/assets/home-banner.png" alt="Wooden Craft Art" />
             </Box>
 
             <Box pos="absolute" top={{ base: "16", md: "44" }} maxW="600px">
                 <Box animation={animate ? `${fadeSlideIn} 1s ease-out forwards` : "none"}
                     opacity={0}>
                     <Stack px={5}>
-                        <Heading fontFamily="alice" maxW="550px" as="h1" fontSize={{ base: "2xl", md: "6xl" }} lineHeight="1" fontWeight="bolder" color="#bf8c55">
+                        <Heading fontFamily="alice" maxW="550px" fontSize={{ base: "2xl", md: "6xl" }} lineHeight="1" fontWeight="bolder" color="#bf8c55">
                             CRAFTING TIMELESS BEAUTY FROM NATURE'S FINEST WOOD.
                         </Heading>
                         <Box border="1px solid #9a7859" w="200px" rounded="md" p={0.5}>

@@ -26,10 +26,10 @@ export default function HeroSection() {
     return (
         <Flex w="100%" pos="relative" align="center" justify="center" bg="gray.50" flexWrap={{ base: "wrap", md: "nowrap" }}>
             <Box bgColor="black" w="100%" h="100%" >
-                <Image opacity={0.7} w="100%" h="100%" src="/assets/home-banner.png" alt="Wooden Craft Art" />
+                <Image opacity={0.7} w="100%" h={{ base: "64", md: "550px" }} objectFit="" src="/assets/home-banner.png" alt="Wooden Craft Art" />
             </Box>
 
-            <Box pos="absolute" top={{ base: "16", md: "44" }} maxW="600px">
+            <Box pos="absolute" top="50%" left="50%" transform="translate(-50%, -50%)" maxW="600px">
                 <Box animation={animate ? `${fadeSlideIn} 1s ease-out forwards` : "none"}
                     opacity={0}>
                     <Stack px={5}>

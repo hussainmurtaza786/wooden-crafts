@@ -13,8 +13,8 @@ import PurposeAndWork from "./components/PurposeAndWorkWith";
 export default function AboutPage() {
     return (
         <>
-            <AboutSection />
             <AboutBanner />
+            <AboutSection />
             <PurposeAndWork />
             <Commitment />
             <ExplorePanel />

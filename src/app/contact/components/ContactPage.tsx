@@ -1,20 +1,50 @@
 "use client";
-import {
-    Box,
-    Flex,
-    Heading,
-    Text,
-    Button,
-    Textarea,
-    Input,
-
-} from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, } from "@chakra-ui/react";
 import { MdHeadsetMic, MdOutlineEmail } from "react-icons/md";
 import { FaHouse } from "react-icons/fa6";
 import { GiAlarmClock } from "react-icons/gi";
 import { CONTACT } from "@/app-config";
+import { toaster } from "@/components/ui/toaster";
+import Form from "@/components/Form";
 
 export default function ContactPage() {
+    const handleOnSubmit = async (values: any, resetForm: () => void) => {
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(values)
+            })
+            console.log("value", values)
+            const data = await response.json()
+            if (response.ok) {
+                toaster.create({
+                    title: "Form Submitted", type: "success",
+                    description: "Thanks for contacting us. We will get back to you soon",
+                    duration: 8000,
+                    action: { label: "OK", onClick: () => { } },
+                });
+                resetForm();
+            }
+            else
+                toaster.create({
+                    title: "Error", type: "error",
+                    description: `Failed to submit application!`,
+                    duration: 5000,
+                })
+
+            return data
+
+        } catch (error: any) {
+            toaster.create({
+                title: "Error", type: "error",
+                description: error.message || "Something went wrong",
+                duration: 5000
+            })
+        }
+    }
     return (
         <Flex py="32" px="5" justify="center" align="center" h="full" w="full" bgSize="cover" bgPos="top" bgRepeat="no-repeat" bgImage='url("/assets/bgPattern.png")'>
             <Flex shadow="lg" zIndex={10} gap={{ base: "10", md: "0" }} py={{ base: "10", md: "2" }} bgColor="white" direction={{ base: "column", md: "row" }} justify="center" align="center" borderRadius="md" overflow="hidden">
@@ -73,7 +103,17 @@ export default function ContactPage() {
                         We listen, we care, and we value your message.
                     </Heading>
 
-                    <form>
+                    <Form
+                        onSubmit={handleOnSubmit}
+                        fields={[
+                            { type: "text", name: "name", label: "", fieldArea: { base: 12, sm: 12 }, inputProps: { placeholder: 'Full Name' } },
+                            { type: "email", name: "email", label: "", fieldArea: { base: 12, sm: 12 }, inputProps: { placeholder: 'Email' } },
+                            { type: "tel", name: "phone", label: "", fieldArea: { base: 12, sm: 12 }, inputProps: { placeholder: 'Contact Number' } },
+                            { type: "text-area", name: "message", label: "", fieldArea: 12, inputProps: { placeholder: 'Your Message...', rows: 8 } },
+                            { type: 'submit', name: 'submit-btn', label: <>Submit Message </>, inputProps: { mr: "auto", rounded: "sm", color: "black", bgColor: "transparent", border: "1px solid #ccc", size: "lg", w: "full", fontWeight: "600", _hover: { bgColor: "gray.100" } }, fieldArea: 12 },
+                        ]}
+                    />
+                    {/* <form onSubmit={handleOnSubmit}>
                         <Input p={2} id="name" name="name" placeholder="Enter your full name" mb={6} />
 
                         <Input p={2} id="email" name="email" placeholder="your email address" type="email" mb={6} />
@@ -85,7 +125,7 @@ export default function ContactPage() {
                         <Button type="submit" bgColor="transparent" border="1px solid #ccc" size="lg" w="full" fontWeight="600" _hover={{ bg: "gray.100" }}>
                             Send Message
                         </Button>
-                    </form>
+                    </form> */}
                 </Box>
             </Flex>
         </Flex>

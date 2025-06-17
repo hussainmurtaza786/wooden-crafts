@@ -6,14 +6,14 @@ import { ReactNode, useEffect } from "react";
 import Header from './Header'
 import Footer from './Footer'
 import { Toaster } from "@/components/ui/toaster";
-import ChatBot from "@/app/ChatBot";
+// import ChatBot from "@/app/ChatBot";
 import Script from "next/script";
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
     return (
         <html lang="en" suppressHydrationWarning>
             <head>
-                {/* Botpress scripts */}
+                {/* Botpress scripts
                 <Script
                     src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"
                     strategy="afterInteractive"
@@ -21,13 +21,13 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
                 <Script
                     src="https://files.bpcontent.cloud/2025/06/11/09/20250611092526-K079K47U.js"
                     strategy="afterInteractive"
-                />
+                /> */}
             </head>
             <body>
                 <Provider enableSystem={false}>
                     <Toaster />
                     <Layout>
-                        <ChatBot />
+                        {/* <ChatBot /> */}
                         {children}
                     </Layout>
                 </Provider>

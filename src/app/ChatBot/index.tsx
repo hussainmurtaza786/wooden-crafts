@@ -1,34 +1,34 @@
-'use client';
-import { useEffect } from "react";
+// 'use client';
+// import { useEffect } from "react";
 
-const ChatBot = () => {
-  useEffect(() => {
+// const ChatBot = () => {
+//   useEffect(() => {
 
-    Object.keys(localStorage).forEach((key) => {
-      if (key.startsWith("bp:webchat::")) {
-        localStorage.removeItem(key);
-      }
-    });
+//     Object.keys(localStorage).forEach((key) => {
+//       if (key.startsWith("bp:webchat::")) {
+//         localStorage.removeItem(key);
+//       }
+//     });
 
-    const isLoaded = (src: string) => {
-      return !!document.querySelector(`script[src="${src}"]`);
-    };
+//     const isLoaded = (src: string) => {
+//       return !!document.querySelector(`script[src="${src}"]`);
+//     };
 
-    const injectScript = (src: string) => {
-      if (isLoaded(src)) return;
+//     const injectScript = (src: string) => {
+//       if (isLoaded(src)) return;
 
-      const script = document.createElement("script");
-      script.src = src;
-      script.defer = true;
-      script.async = true;
-      document.head.appendChild(script);
-    };
+//       const script = document.createElement("script");
+//       script.src = src;
+//       script.defer = true;
+//       script.async = true;
+//       document.head.appendChild(script);
+//     };
 
-    injectScript("https://cdn.botpress.cloud/webchat/v3.0/inject.js");
-    injectScript("https://files.bpcontent.cloud/2025/06/11/09/20250611092526-K079K47U.js");
-  }, []);
+//     injectScript("https://cdn.botpress.cloud/webchat/v3.0/inject.js");
+//     injectScript("https://files.bpcontent.cloud/2025/06/11/09/20250611092526-K079K47U.js");
+//   }, []);
 
-  return null;
-};
+//   return null;
+// };
 
-export default ChatBot;
+// export default ChatBot;

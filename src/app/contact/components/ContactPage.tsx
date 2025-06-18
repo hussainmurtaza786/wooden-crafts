@@ -113,19 +113,6 @@ export default function ContactPage() {
                             { type: 'submit', name: 'submit-btn', label: <>Submit Message </>, inputProps: { mr: "auto", rounded: "sm", color: "black", bgColor: "transparent", border: "1px solid #ccc", size: "lg", w: "full", fontWeight: "600", _hover: { bgColor: "gray.100" } }, fieldArea: 12 },
                         ]}
                     />
-                    {/* <form onSubmit={handleOnSubmit}>
-                        <Input p={2} id="name" name="name" placeholder="Enter your full name" mb={6} />
-
-                        <Input p={2} id="email" name="email" placeholder="your email address" type="email" mb={6} />
-
-                        <Input p={2} id="phone" name="phone" placeholder="Phone Number" type="tel" mb={6} />
-
-                        <Textarea p={2} id="message" placeholder="Write your message here..." mb={8} rows={6} />
-
-                        <Button type="submit" bgColor="transparent" border="1px solid #ccc" size="lg" w="full" fontWeight="600" _hover={{ bg: "gray.100" }}>
-                            Send Message
-                        </Button>
-                    </form> */}
                 </Box>
             </Flex>
         </Flex>

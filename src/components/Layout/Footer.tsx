@@ -35,16 +35,6 @@ export default function Footer() {
 
                 </Box>
             </Box>
-            <Box flex={1}>
-                <Heading mb={4} fontSize="20px" fontWeight="bolder">Kind Message</Heading>
-                <Text mb={3}>Message us for any query related to design or material</Text>
-                <form >
-                    <Textarea p={2} mb={2} border="1px solid lightgrey" rows={3} />
-                    <Button type="submit" w="full" bg="rgba(255,255,255,0.1)" color="white" border="1px solid rgba(255,255,255,0.3)" borderRadius="lg" _hover={{ bg: "rgba(255,255,255,0.2)" }} >
-                        Submit
-                    </Button>
-                </form>
-            </Box>
 
         </Flex>
     )

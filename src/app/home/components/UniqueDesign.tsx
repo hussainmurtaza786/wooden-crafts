@@ -119,7 +119,7 @@ export default function UniqueDesign() {
                             <Box minW="300px" borderLeft="2px solid black">
                                 <Text mb={2} fontSize="lg" px="4" lineHeight="40px" fontWeight="400">Each piece is shaped with passion, preserving the natural beauty of wood in every curve and grain.</Text>
                                 <Link href={PAGES.About.path}>
-                                    <Button mx={4} bgColor="#5e3a1c" color="white" px={6} py={4} fontSize="md" rounded="md" _hover={{ bg: "#714625" }}>
+                                    <Button mx={4} bgColor="app.brown1" color="white" px={6} py={4} fontSize="md" rounded="md" _hover={{ bg: "#714625" }}>
                                         Explore Our Legacy
                                     </Button>
                                 </Link>

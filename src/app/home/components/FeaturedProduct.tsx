@@ -12,27 +12,39 @@ export default function FeaturedProduct() {
     const [hasAnimated, setHasAnimated] = useState(false);
     const titleRef = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting && !hasAnimated) {
-                    let index = 0;
-                    const interval = setInterval(() => {
-                        setDisplayedTitle(fullText.slice(0, index + 1));
-                        index++;
-                        if (index === fullText.length) clearInterval(interval);
-                    }, 100); // Speed of letter typing
-                    setHasAnimated(true);
-                }
-            },
-            { threshold: 0.7 }
-        );
+  useEffect(() => {
+    const hasAnimatedBefore = sessionStorage.getItem("featuredProductAnimated");
 
-        if (titleRef.current) observer.observe(titleRef.current);
-        return () => {
-            if (titleRef.current) observer.unobserve(titleRef.current);
-        };
-    }, [hasAnimated]);
+    if (hasAnimatedBefore) {
+        setDisplayedTitle(fullText); // Show full title instantly
+        setHasAnimated(true);
+        return;
+    }
+
+    const observer = new IntersectionObserver(
+        ([entry]) => {
+            if (entry.isIntersecting && !hasAnimated) {
+                let index = 0;
+                const interval = setInterval(() => {
+                    setDisplayedTitle(fullText.slice(0, index + 1));
+                    index++;
+                    if (index === fullText.length) {
+                        clearInterval(interval);
+                        sessionStorage.setItem("featuredProductAnimated", "true");
+                    }
+                }, 100);
+                setHasAnimated(true);
+            }
+        },
+        { threshold: 0.7 }
+    );
+
+    if (titleRef.current) observer.observe(titleRef.current);
+
+    return () => {
+        if (titleRef.current) observer.unobserve(titleRef.current);
+    };
+}, [hasAnimated]);
 
     return (
         <Flex justify="center" align="center" direction="column" py={{ base: "60px", md: "100px" }} px={{ base: "20px", md: "40px" }}>

@@ -13,13 +13,14 @@ export const PAGES = {
     About: { title: "About Us", path: "/about", },
     Contact: { title: "Contact Us", path: "/contact", },
     Catalog: { title: "Catalog", path: "/catalog", },
+    CustomOrder: { title: "Custom Order", path: "/custom-order", },
 
 }
 export const HEADER_LINKS = [
-    PAGES.About, PAGES.Catalog, PAGES.Contact
+    PAGES.About, PAGES.Catalog, PAGES.CustomOrder, PAGES.Contact
 ]
 export const FOOTER_LINKS = [
-    PAGES.About, PAGES.Catalog, PAGES.Contact
+    PAGES.About, PAGES.Catalog, PAGES.CustomOrder, PAGES.Contact
 ]
 
 export const CONTACT = {

@@ -181,8 +181,8 @@ export const FormFileField = memo(({ name, accept, className, description, multi
                 />
                 <FileUploadList  />
             </FileUploadRoot> */}
-            <Text fontSize='sm' color='red.600' >{meta.touched && meta.error}</Text>
-            <Text fontSize='sm' color='app.blue2' mt='1' >{description}</Text>
+            <Text fontSize='sm' color='red' >{meta.touched && meta.error}</Text>
+            <Text fontSize='sm' color='red' mt='1' >{description}</Text>
         </GridItem>
     )
 })
@@ -209,11 +209,11 @@ export const FormGroupField = memo(({ type, name, label, fieldGroup, required, f
     if (!visible) return null
 
     return (
-        <GridItem p={2.5} pt={1.5} border='1px' borderColor='app.grey2' _focusWithin={{ borderColor: 'app.grey1' }} rounded='lg'
+        <GridItem p={2.5} pt={1.5} border='1px' borderColor='gray.300' _focusWithin={{ borderColor: 'gray.400' }} rounded='lg'
             // border='1px' borderColor='gray'
             colSpan={fieldArea}
         >
-            <Heading as='h3' fontSize='md' textUnderlineOffset='3px' borderColor='app.grey2' my={2} >{label}</Heading>
+            <Heading as='h3' fontSize='md' textUnderlineOffset='3px' borderColor='gray.300' my={2} >{label}</Heading>
             <Grid w='full' templateColumns='repeat(12, 1fr)' gap={3} columnGap={2.5} >
                 {handleGenerateChildFields()}
             </Grid>
@@ -239,15 +239,15 @@ export const FormArrayField = memo(({ type, name, label, labelForAddNewItem, sco
                 const handleAddNew = () => {
                     arrayHelper.insert(field.value?.length || 1, scope.generateValues(fieldArrayGroup))
                 }
-                return <GridItem pos='relative' p={2.5} pt={1.5} border='1px' borderColor='app.grey2' _focusWithin={{ borderColor: 'app.grey1' }} rounded='lg'
+                return <GridItem pos='relative' p={2.5} pt={1.5} border='1px' borderColor='gray.200' _focusWithin={{ borderColor: 'app.grey1' }} rounded='lg'
                     colSpan={12}
                 >
-                    <Heading w='full' as='h3' fontSize='md' textUnderlineOffset='3px' borderColor='app.grey2' my={2} >{label}</Heading>
+                    <Heading w='full' as='h3' fontSize='md' textUnderlineOffset='3px' borderColor='gray.200' my={2} >{label}</Heading>
                     {labelForAddNewItem ?
                         <Box onClick={handleAddNew} display='inline' pos='absolute' zIndex={1} right='8px' bottom='-16px' >
                             {labelForAddNewItem}
                         </Box> :
-                        <Icon cursor='pointer' color='app.maroon1' as={FaPlusCircle} onClick={handleAddNew} boxSize={5} pos='absolute' right='8px' bottom='-10px' />
+                        <Icon cursor='pointer' color='red' as={FaPlusCircle} onClick={handleAddNew} boxSize={5} pos='absolute' right='8px' bottom='-10px' />
                     }
 
                     <Grid w='full' templateColumns='repeat(12, 1fr)' gap={3} columnGap={2.5} >

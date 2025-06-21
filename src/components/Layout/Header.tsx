@@ -1,3 +1,4 @@
+'use client';
 import { HEADER_LINKS } from "@/app-config";
 import { Box, Button, CloseButton, Drawer, Flex, Heading, Portal, useBreakpointValue } from "@chakra-ui/react";
 import Link from "next/link";

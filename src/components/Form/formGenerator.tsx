@@ -241,7 +241,7 @@ export class FormGenerator {
                         key={`${pName}.${f.name}`} mt={5}
                         colSpan={fieldArea} display='flex' justifyContent='center'
                     >
-                        <Button bgColor='app.blue2' loading={isSubmitting} loadingText="Submitting..." color='white' px='5' py={5} rounded='3xl' size={{ base: 'sm', lg: 'md' }}
+                        <Button bgColor='app.green' loading={isSubmitting} loadingText="Submitting..." color='white' px='5' py={5} rounded='3xl' size={{ base: 'sm', lg: 'md' }}
                             type={f.type}
                             disabled={isSubmitting} aria-disabled={isSubmitting}
                             {...f.inputProps}

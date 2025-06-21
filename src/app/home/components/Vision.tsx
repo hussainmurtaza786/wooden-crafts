@@ -37,7 +37,7 @@ export default function Vision() {
 
     return (
         <Box ref={sectionRef} px={4} py={16} bg="gray.50">
-            <Heading fontSize="5xl" fontFamily="alice" textAlign="center" mb={10} color="#5e3a1c">
+            <Heading fontSize="5xl" lineHeight="1.2" fontFamily="alice" textAlign="center" mb={10} color="#5e3a1c">
                 Bring Your Vision to Life
             </Heading>
 

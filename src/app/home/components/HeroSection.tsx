@@ -32,11 +32,11 @@ export default function HeroSection() {
             <Box pos="absolute" top="50%" left="50%" transform="translate(-50%, -50%)" maxW="600px">
                 <Box animation={animate ? `${fadeSlideIn} 1s ease-out forwards` : "none"}
                     opacity={0}>
-                    <Stack px={5}>
-                        <Heading fontFamily="alice" maxW="550px" fontSize={{ base: "2xl", md: "6xl" }} lineHeight="1" fontWeight="bolder" color="#bf8c55">
+                    <Stack px={2}>
+                        <Heading fontFamily="alice" maxW="550px" w="100%" fontSize={{ base: "2xl", md: "6xl" }} lineHeight="1" fontWeight="bolder" color="#bf8c55">
                             CRAFTING TIMELESS BEAUTY FROM NATURE'S FINEST WOOD.
                         </Heading>
-                        <Box border="1px solid #9a7859" w="200px" rounded="md" p={0.5}>
+                        <Box border="1px solid #9a7859" w={{ base: "150px", md: "200px" }} rounded="md" p={0.5}>
                             <Link href={PAGES.About.path}>
                                 <Button w="100%" bgColor="#5e3a1c" color="white" px={6} py={4} fontSize="md" _hover={{ bg: "#714625" }}>
                                     Discover

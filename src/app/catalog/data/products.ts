@@ -3,7 +3,7 @@ export const DUMMY_DATA = [
   {
     id: "1",
     slug: "wooden-art-oak",
-    title: "Oak Wooden Deer",
+    title: "Wooden Deer",
     description: "A handcrafted 3D wooden deer sculpture made from premium oak wood. Every curve and detail is carved by expert artisans, making it a standout decorative piece for modern and rustic interiors alike.",
     material: "Oak Wood",
     workType: "3d Wooden Craft",
@@ -14,7 +14,7 @@ export const DUMMY_DATA = [
   {
     id: "2",
     slug: "wooden-map",
-    title: "3D World Map",
+    title: "World Map",
     description: "This intricate 3D world map is laser-cut and layered using walnut and birch wood. It adds a travel-inspired flair to your wall with depth and texture, perfect for living rooms and study areas.",
     material: "Walnut + Birch",
     workType: "3d Wooden Craft",

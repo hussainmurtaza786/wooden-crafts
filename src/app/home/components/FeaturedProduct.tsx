@@ -50,7 +50,7 @@ export default function FeaturedProduct() {
         <Flex justify="center" align="center" direction="column" py={{ base: "60px", md: "100px" }} px={{ base: "20px", md: "40px" }}>
 
             <Box textAlign="center" mb="60px">
-                <Heading fontFamily="alice" fontSize="5xl" color="gray.800">
+                <Heading fontFamily="alice" lineHeight="1.2" fontSize="5xl" color="gray.800">
                     Featured Product
                 </Heading>
             </Box>

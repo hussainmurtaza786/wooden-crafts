@@ -1,5 +1,5 @@
 
-export const DOMAIN_NAME = "";
+export const DOMAIN_NAME = "www.shariqatraders.com";
 
 export const SITE_TITLE = ``;
 
@@ -24,7 +24,7 @@ export const FOOTER_LINKS = [
 ]
 
 export const CONTACT = {
-    phone: "+92 331 2293684",
+    phone: "+92 370 154565",
     email: "example@hotmail.com",
     shopNo: "Manzor Colony Karachi ,Pakistan",
     ownerEmail: "hm985218059@gmail.com"

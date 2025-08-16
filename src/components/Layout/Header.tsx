@@ -10,7 +10,7 @@ export default function Header() {
     return (
         <Flex color="white" direction="row" gap={5} justify="space-around" bgColor="app.green" py={{ base: 8, md: 8 }} fontSize="18px" w="100%">
             <Link href="/">
-                <Heading textAlign="center" fontSize="30px" fontWeight="bolder">Wooden Crafts</Heading>
+                <Heading textAlign="center" fontSize="30px" fontWeight="bolder">ShariqaTraders</Heading>
             </Link>
             {base === "baseValue" ? <MobileLayout /> : null}
 

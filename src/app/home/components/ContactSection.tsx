@@ -1,7 +1,7 @@
 'use client'
 import Form from "@/components/Form";
 import { toaster } from "@/components/ui/toaster";
-import { Box, Image, Input, Textarea, VStack, Button, Heading, } from "@chakra-ui/react";
+import { Box, Image, Heading, } from "@chakra-ui/react";
 
 export default function ContactPage() {
     const handleOnSubmit = async (values: any, resetForm: () => void) => {

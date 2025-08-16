@@ -18,7 +18,7 @@ export default function AboutPage() {
             <PurposeAndWork />
             <Commitment />
             <ExplorePanel />
-            <ContactPage />
+            {/* <ContactPage /> */}
         </>
     );
 }

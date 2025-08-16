@@ -1,121 +1,108 @@
-/** @jsxImportSource @emotion/react */
-'use client';
+"use client";
+import { Box, Flex, Image, Heading, Text, Button, SimpleGrid, Grid } from "@chakra-ui/react";
+import Link from "next/link";
 
-import { Box, Flex, Heading, SimpleGrid, Text, VStack } from '@chakra-ui/react';
-import { css, keyframes } from '@emotion/react';
-import { useEffect, useRef, useState } from 'react';
+const expertiseData = [
+    {
+        id: "frames",
+        title: "Frames",
+        image: "https://image.made-in-china.com/202f0j00gfGqCHPROkcM/High-Quality-Wooden-House-Decoration-Wood-Photo-Frames-for-Arts-Painting-Projects.webp",
+        description:
+            "Beautifully crafted wooden frames perfect for photos, art, and mirrors, adding warmth and elegance to your space."
+    },
+    {
+        id: "decor",
+        title: "Decor",
+        image: "https://images.woodenstreet.de/wsnew2024/static-webmedia/images/home-decor/icon1.jpg",
+        description:
+            "Stylish wooden décor pieces designed to bring a natural charm and unique character to any room."
+    },
+    {
+        id: "kitchen-items",
+        title: "Kitchen Items",
+        image: "https://i5.walmartimages.com/seo/9-PCS-Wooden-Spoons-Cooking-Wooden-Utensils-Cooking-Spatula-Turner-Slotted-Spoon-Wood-Spoon-Set-Kitchen-Essentials-Non-Stick-Cookware-Heat-Resistant_e6440f01-2400-4606-a6fb-d8f8569cf366.93f22e82b602d391ee289484d09cdefc.jpeg",
+        description:
+            "Premium wooden kitchenware including cutting boards, utensils, and serving trays for a touch of craftsmanship."
+    },
+    {
+        id: "furniture",
+        title: "Furniture",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDsvz3kuUUmnNxUYRMdTlqpN31c64fGdcOKA&s",
+        description:
+            "Custom-designed wooden furniture built to last, combining functionality with timeless beauty."
+    },
+    {
+        id: "laser-cutting",
+        title: "Laser Cutting",
+        image: "https://www.epiloglaser.com/assets/img/wd-cigarbox.jpg",
+        description:
+            "High-precision laser cutting for intricate designs and personalized wooden creations."
+    },
+    {
+        id: "3d-design",
+        title: "3d Design",
+        image: "https://static.vecteezy.com/system/resources/previews/054/047/730/non_2x/intricate-wooden-flower-illustration-png.png",
+        description:
+            "Modern 3D wooden designs blending creativity, precision, and artistry for unique results."
+    },
+    {
+        id: "wooden-doors-panels",
+        title: "Wooden Doors & Panels",
+        image: "https://www.3dkart.in/wp-content/uploads/2023/06/Bouquet-Door-2.jpg",
+        description:
+            "Elegant and durable wooden doors and panels that combine craftsmanship with lasting quality."
+    }
+];
 
-const fadeInUp = keyframes`
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`;
-
-
-
-export default function ExpertiseSection() {
-    const sectionRef = useRef<HTMLDivElement>(null);
-    const [animate, setAnimate] = useState(false);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => setAnimate(entry.isIntersecting),
-            { threshold: 0.3 }
-        );
-
-        if (sectionRef.current) observer.observe(sectionRef.current);
-
-        return () => {
-            if (sectionRef.current) observer.unobserve(sectionRef.current);
-        };
-    }, []);
-
+export default function FieldOfExpertise() {
+    const truncateText = (text: any, limit: any) => {
+        if (text.length <= limit) return text;
+        return text.slice(0, limit) + "...";
+    };
 
     return (
-        <Flex justifyContent="center" alignItems="center">
-            <Box maxW="1440px" ref={sectionRef} bg="#f7f3ef" py={16} px={{ base: 4, md: 16 }}>
-                <VStack textAlign="center" mb={12}>
-                    <Heading fontFamily="alice" size="5xl" color="#5e3a1c">
-                        Our Expertise
-                    </Heading>
-                    <Text opacity={animate ? 1 : 0}
-                        css={
-                            animate
-                                ? css`
-                                  animation: ${fadeInUp} 0.6s ease-out;
-                                `
-                                : undefined
-                        } fontSize="lg" color="gray.600" maxW="600px" mt={4}>
-                        Masterfully crafted wooden creations designed with precision, passion, and timeless artistry.
-                    </Text>
-                </VStack>
+        <Box w="100%" py={{ base: 10, md: 20 }} px={{ base: 4, md: 8 }} bg="#fffaf5">
+            <Heading textAlign="center" fontSize={{ base: "2xl", md: "4xl" }} fontWeight="bold" color="#5e3a1c" mb={10}>
+                Our Field of Expertise
+            </Heading>
 
-                <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} gap={5}>
-                    {expertiseItems.map((item, index) => (
-                        <Box cursor="pointer" _hover={{ shadow: "2xl" }} key={index} py="10" px="8" bg="white" borderRadius="xl" boxShadow="lg" color="gray.800" fontWeight="semibold" fontSize="lg" textAlign="center" opacity={animate ? 1 : 0}
-                            css={
-                                animate
-                                    ? css`
-                    animation: ${fadeInUp} 0.6s ease-out ${index * 0.1}s both;
-                  `
-                                    : undefined
-                            }
-                        >
-                            <Heading fontSize="lg" fontWeight="bold">{item.title}</Heading>
-                            <Text fontSize="sm">{item.description}</Text>
+            <Grid templateColumns="repeat(3, 1fr)" gap="6" columns={{ base: 1, sm: 2, md: 3 }} maxW="1200px" mx="auto">
+                {expertiseData.map((item) => (
+                    <Box key={item.id} bg="white" p={2} shadow="md" borderRadius="lg" overflow="hidden" transition="transform 0.3s ease" _hover={{ transform: "translateY(-5px)", shadow: "lg" }}>
+                        {/* Image */}
+                        <Image src={item.image} alt={item.title} w="100%" h="300px" objectFit="contain" />
+
+                        {/* Content */}
+                        <Box p={5}>
+                            <Heading fontSize="xl" mb={3} color="#5e3a1c">
+                                {item.title}
+                            </Heading>
+                            <Text fontSize="md" color="gray.600" mb={5}>
+                                {truncateText(item.description, 90)}
+                            </Text>
+
+                            <Link href={`/shop?category=${item.id}`}>
+                                <Button
+                                    px={4}
+                                    py={2}
+                                    bgGradient="to-r" gradientFrom="#5e3a1c" gradientTo="red"
+                                    // bgGradient="linear(, #5e3a1c 50%, #714625 50%)"
+                                    backgroundSize="200% 100%"
+                                    backgroundPosition="left bottom"
+                                    color="white"
+                                    transition="all 0.5s ease"
+                                    _hover={{
+                                        backgroundPosition: "right bottom",
+                                    }}
+                                >
+                                    View More
+                                </Button>
+                            </Link>
+
                         </Box>
-                    ))}
-                </SimpleGrid>
-            </Box>
-        </Flex>
+                    </Box>
+                ))}
+            </Grid>
+        </Box>
     );
-};
-
-
-const expertiseItems = [
-    {
-        title: '3D Wooden Wall Art',
-        description: 'Custom 3D wall pieces that bring depth, texture, and elegance to your spaces.',
-    },
-    {
-        title: 'Premium Wooden Frames',
-        description: 'Elegant handcrafted wooden frames for art, mirrors, or photos with perfect finishes.',
-    },
-    {
-        title: 'Custom 3D Woodwork',
-        description: 'Tailored 3D wood projects designed to reflect your vision and creativity.',
-    },
-    {
-        title: 'Handcrafted Wooden Decor',
-        description: 'Unique decor pieces carved with passion and expert craftsmanship.',
-    },
-    // {
-    //     title: 'Rustic & Modern Wall Panels',
-    //     description: 'Wall panel designs that suit both classic and contemporary interiors.',
-    // },
-    {
-        title: 'Engraved Wooden Nameplates',
-        description: 'Precision-cut personalized wooden nameplates for homes and offices.',
-    },
-    {
-        title: 'Artistic Wood Sculptures',
-        description: 'Artful wood sculptures that showcase creativity and natural beauty.',
-    },
-    {
-        title: 'Custom Laser Wood Cutting',
-        description: 'Accurate laser-cut wood designs for signage, crafts, and detailing.',
-    },
-    {
-        title: 'Bespoke Wooden Signs',
-        description: 'Business and home signage crafted with durability and style.',
-    },
-    {
-        title: 'Luxury Wood Installations',
-        description: 'High-end wooden installations for luxury spaces and premium interiors.',
-    },
-];
+}

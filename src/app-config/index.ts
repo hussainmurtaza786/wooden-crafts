@@ -24,7 +24,7 @@ export const FOOTER_LINKS = [
 ]
 
 export const CONTACT = {
-    phone: "+92 370 154565",
+    phone: "+92 370 0154565",
     email: "example@hotmail.com",
     shopNo: "Manzor Colony Karachi ,Pakistan",
     ownerEmail: "hm985218059@gmail.com"

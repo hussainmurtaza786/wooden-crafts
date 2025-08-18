@@ -22,27 +22,18 @@ export default function AboutBanner() {
         return () => clearTimeout(timeout);
     }, []);
     return (
-        <Flex justify="center" align="center" pos="relative" w="100%">
-
+        <Flex justify="center" align="center" pos="relative" w="100%" >
             <Box bgColor="black" w="100%" h="100%" >
-                <Image opacity={0.7} w="100%" h={{ base: "64", md: "550px" }} objectFit="fill" src="/assets/about-banner.png" alt="Wooden Craft Art" />
+                <Image opacity={0.7} w="100%" h={{ base: "64", md: "550px" }} objectFit="fill" src="/assets/about-bg.png" alt="Wooden Craft Art" />
             </Box>
             <Box pos="absolute" top="50%" left="50%" transform="translate(-50%, -50%)" maxW="600px" px={{ base: 3, md: 12 }} w="100%">
                 <Box animation={animate ? `${fadeSlideIn} 1s ease-out forwards` : "none"}
                     opacity={0}>
-                    <Stack px={5} textAlign="center">
-
-                        <Heading fontFamily="alice" maxW="550px" fontSize={{ base: "2xl", md: "5xl" }} lineHeight="1" fontWeight="bolder" color="#bf8c55">
-                            Crafting Timeless Stories in Wood
-                        </Heading>
-                        <Text color="#bf8c55" maxW="550px" fontSize={{ base: "md", md: "lg" }}>
-                            Every curve, every carving, and every grain tells a tale.
-                            Rooted in ancient culture and awakened by modern artistry,
-                            we bring life to wood — one masterpiece at a time.
-                        </Text>
-                    </Stack>
+                    <Heading textAlign='center' fontFamily="alice" fontSize={{ base: "2xl", md: "3xl" }} lineHeight="1.2" fontWeight="bolder" color="white">
+                        At Shariq Traders, we provide quality products and reliable solutions tailored to your needs, combining expertise with a commitment to trust and long term partnerships.
+                    </Heading>
                 </Box>
             </Box>
-        </Flex>
+        </Flex >
     )
 }

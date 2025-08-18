@@ -1,31 +1,43 @@
-'use client';
+'use client'
 import { HEADER_LINKS } from "@/app-config";
-import { Box, Button, CloseButton, Drawer, Flex, Heading, Portal, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Button, CloseButton, Drawer, Flex, Heading, Image, Portal } from "@chakra-ui/react";
 import Link from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 export default function Header() {
-    const base = useBreakpointValue({ base: "baseValue", md: "mdValue" })
-
     return (
-        <Flex color="white" direction="row" gap={5} justify="space-around" bgColor="app.green" py={{ base: 8, md: 8 }} fontSize="18px" w="100%">
-            <Link href="/">
-                <Heading textAlign="center" fontSize="30px" fontWeight="bolder">ShariqaTraders</Heading>
-            </Link>
-            {base === "baseValue" ? <MobileLayout /> : null}
+        <Flex
+            color="white"
+            direction="row"
+            gap={5}
+            justify="space-around"
+            bgColor="app.green"
+            py={8}
+            fontSize="18px"
+            w="100%"
+            align="center"
+        >
+            {/* Mobile (hamburger only) */}
+            <Box display={{ base: "block", md: "none" }}>
+                <MobileLayout />
+            </Box>
 
-            {base === "mdValue" && <Box>
-                <Flex gap={10} direction={{ base: "column", md: "row" }} justify="center" align={{ base: "center", md: "normal" }}>
+            {/* Logo */}
+            <Link href="/">
+                <Image px={5} src="/assets/logo.png" alt="Shariq Traders Logo" width="100%" />
+            </Link>
+
+            {/* Desktop links */}
+            <Box display={{ base: "none", md: "block" }}>
+                <Flex gap={10} direction="row" justify="center" align="center">
                     {HEADER_LINKS.map((item, idx) => (
                         <Link key={idx} href={item.path}> {item.title} </Link>
                     ))}
                 </Flex>
-            </Box>}
-
+            </Box>
         </Flex>
     )
 }
-
 
 function MobileLayout() {
     return (
@@ -39,20 +51,13 @@ function MobileLayout() {
                 <Drawer.Backdrop />
                 <Drawer.Positioner>
                     <Drawer.Content>
-                        <Drawer.Header>
-                            {/* <Drawer.Title>Drawer Title</Drawer.Title> */}
-                        </Drawer.Header>
                         <Drawer.Body px={5} py={10}>
-                            <Flex gap={10} direction={{ base: "column", md: "row" }} justify="center" align={{ base: "center", md: "normal" }}>
+                            <Flex gap={6} direction="column" align="flex-start">
                                 {HEADER_LINKS.map((item, idx) => (
                                     <Link key={idx} href={item.path}> {item.title} </Link>
                                 ))}
                             </Flex>
                         </Drawer.Body>
-                        {/* <Drawer.Footer>
-                            <Button variant="outline">Cancel</Button>
-                            <Button>Save</Button>
-                        </Drawer.Footer> */}
                         <Drawer.CloseTrigger asChild>
                             <CloseButton size="sm" />
                         </Drawer.CloseTrigger>
@@ -60,6 +65,5 @@ function MobileLayout() {
                 </Drawer.Positioner>
             </Portal>
         </Drawer.Root>
-
     )
 }

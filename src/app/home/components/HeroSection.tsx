@@ -4,6 +4,7 @@ import { Box, Flex, Image, Heading, Button, Stack } from "@chakra-ui/react";
 import { keyframes } from "@emotion/react";
 import Link from "next/link";
 import { PAGES } from "@/app-config";
+import CustomButton from "@/components/CustomButton";
 
 const fadeSlideIn = keyframes`
   0% {
@@ -18,24 +19,25 @@ const fadeSlideIn = keyframes`
 
 const sections = [
     {
-        title: "CRAFTING TIMELESS BEAUTY FROM NATURE'S FINEST WOOD.",
+        title: "Luxury Dining Tables That Redefine Your Space",
+        button: "Explore",
+        image: "/assets/table1.png",
+        style: "center"
+    },
+    {
+        title: "Premium Dining Tables with Timeless Craftsmanship",
         button: "Order Now",
         image: "/assets/chair.png",
         style: "text-left"
     },
     {
-        title: "ELEGANT DESIGNS FOR EVERY SPACE.",
+        title: "Modern Designs Made to Last a Lifetime",
         button: "Shop Now",
-        image: "/assets/butterfly.png",
+        image: "/assets/table.png",
         style: "text-right"
     },
-    {
-        title: "WHERE CRAFTSMANSHIP MEETS MODERN STYLE.",
-        button: "Explore",
-        image: "/assets/guitor.jpeg",
-        style: "center"
-    }
 ];
+
 
 export default function HeroSection() {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -64,23 +66,21 @@ export default function HeroSection() {
             md: isTextRight ? "row-reverse" : "row"
         }} px={4} py={8} gap={4} animation={animate ? `${fadeSlideIn} 0.8s ease-out` : "none"} transition="all 0.5s ease" key={currentIndex}
         >
-            <Box>
+            <Box >
                 <Stack px={2} textAlign={current.style === "center" ? "center" : "left"}>
-                    <Heading fontFamily="alice" maxW="550px" w="100%" fontSize={{ base: "2xl", md: "6xl" }} lineHeight="1" fontWeight="bolder" color="#bf8c55">
+                    <Heading fontFamily="alice" maxW="600px" w="100%" fontSize={{ base: "2xl", md: "4xl" }} lineHeight="1" fontWeight="bolder" color="#bf8c55">
                         {current.title}
                     </Heading>
-                    <Box border="1px solid #9a7859" w={{ base: "150px", md: "200px" }} rounded="md" p={0.5} mx={current.style === "center" ? "auto" : "0"}>
+                    <Box userSelect="none" p={0.5} mx={current.style === "center" ? "auto" : "0"}>
                         <Link href={PAGES.About.path}>
-                            <Button w="100%" bgColor="#5e3a1c" color="white" px={6} py={4} fontSize="md" _hover={{ bg: "#714625" }}>
-                                {current.button}
-                            </Button>
+                            <CustomButton children={current.button} px={8} py={2} />
                         </Link>
                     </Box>
                 </Stack>
             </Box>
 
-            <Box>
-                <Image maxW="100%" src={current.image} alt="Hero Image" />
+            <Box userSelect="none">
+                <Image maxW="100%" src={current.image} alt={current.title} />
             </Box>
         </Flex>
     );

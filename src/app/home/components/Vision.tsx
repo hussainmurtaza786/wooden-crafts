@@ -54,14 +54,6 @@ export default function Vision() {
                 exactly to your specifications and dreams.
             </Text>
 
-            <Flex justify="center" mb={12}>
-                <Link href={PAGES.About.path}>
-                    <Button bgColor="#5e3a1c" color="white" px={6} py={4} fontSize="md" rounded="md" _hover={{ bg: "#714625" }}>
-                        See Our Process
-                    </Button>
-                </Link>
-            </Flex>
-
             <Flex direction={{ base: "column", md: "row" }} gap={6} justify="center" align="center" flexWrap="wrap">
                 {Data.map((item, idx) => (
                     <Box opacity={animate ? 1 : 0} key={idx} p={6} w={{ base: "100%", sm: "80%", md: "30%" }} bg="white" borderRadius="xl" boxShadow="lg" textAlign="center" color="gray.800" fontWeight="semibold" transition="transform 0.3s ease, box-shadow 0.3s ease" _hover={{ transform: "scale(1.05)", boxShadow: "2xl", }}

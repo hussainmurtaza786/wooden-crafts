@@ -1,4 +1,5 @@
 "use client";
+import CustomButton from "@/components/CustomButton";
 import { Box, Flex, Image, Heading, Text, Button, SimpleGrid, Grid } from "@chakra-ui/react";
 import Link from "next/link";
 
@@ -51,6 +52,13 @@ const expertiseData = [
         image: "https://www.3dkart.in/wp-content/uploads/2023/06/Bouquet-Door-2.jpg",
         description:
             "Elegant and durable wooden doors and panels that combine craftsmanship with lasting quality."
+    },
+    {
+        id: "wooden-wall-art",
+        title: "Wooden Wall Art",
+        image: "https://m.media-amazon.com/images/I/81IAXaoosZL._UF350,350_QL80_.jpg",
+        description:
+            "Stunning wooden wall art pieces that add a touch of nature and sophistication to your home decor."
     }
 ];
 
@@ -66,11 +74,14 @@ export default function FieldOfExpertise() {
                 Our Field of Expertise
             </Heading>
 
-            <Grid templateColumns="repeat(3, 1fr)" gap="6" columns={{ base: 1, sm: 2, md: 3 }} maxW="1200px" mx="auto">
+            <Grid templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)" }} gap="6" columns={{ base: 1, sm: 2, md: 3 }} maxW="1200px" mx="auto">
                 {expertiseData.map((item) => (
                     <Box key={item.id} bg="white" p={2} shadow="md" borderRadius="lg" overflow="hidden" transition="transform 0.3s ease" _hover={{ transform: "translateY(-5px)", shadow: "lg" }}>
                         {/* Image */}
-                        <Image src={item.image} alt={item.title} w="100%" h="300px" objectFit="contain" />
+
+                        <Box userSelect="none" >
+                            <Image src={item.image} alt={item.title} w="100%" h="300px" objectFit="contain" />
+                        </Box>
 
                         {/* Content */}
                         <Box p={5}>
@@ -82,21 +93,7 @@ export default function FieldOfExpertise() {
                             </Text>
 
                             <Link href={`/shop?category=${item.id}`}>
-                                <Button
-                                    px={4}
-                                    py={2}
-                                    bgGradient="to-r" gradientFrom="#5e3a1c" gradientTo="red"
-                                    // bgGradient="linear(, #5e3a1c 50%, #714625 50%)"
-                                    backgroundSize="200% 100%"
-                                    backgroundPosition="left bottom"
-                                    color="white"
-                                    transition="all 0.5s ease"
-                                    _hover={{
-                                        backgroundPosition: "right bottom",
-                                    }}
-                                >
-                                    View More
-                                </Button>
+                                <CustomButton children='View More' px={4} py={2} />
                             </Link>
 
                         </Box>

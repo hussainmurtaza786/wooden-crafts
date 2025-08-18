@@ -13,9 +13,9 @@ export default function HomePage() {
         <>
             <HeroSection />
             <AboutUs />
-            <FeaturedProduct />
+            {/* <FeaturedProduct /> */}
             <ExpertiseSection />
-            <UniqueDesign />
+            {/* <UniqueDesign /> */}
             <Vision />
             <Working />
             {/* <ContactPage /> */}

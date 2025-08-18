@@ -29,7 +29,7 @@ export default function Commitment() {
             </Box>
 
 
-            <Grid templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }} gap={10} maxW="7xl" mx="auto">
+            {/* <Grid templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }} gap={10} maxW="7xl" mx="auto">
                 {Data.map((item, idx) => (
                     <GridItem key={idx} bgImage={`url(${item.imgUrl})`} bgSize="cover" bgPos="center" borderRadius="xl" overflow="hidden" minH="340px" position="relative" boxShadow="lg">
                         <Box position="absolute" inset="0" bgGradient="linear(to-t, rgba(0,0,0,0.7), rgba(0,0,0,0.3))" color="white" display="flex" flexDirection="column" justifyContent="flex-end" p="30px" transition="all 0.3s"
@@ -43,7 +43,7 @@ export default function Commitment() {
                         </Box>
                     </GridItem>
                 ))}
-            </Grid>
+            </Grid> */}
         </Box>
     );
 }

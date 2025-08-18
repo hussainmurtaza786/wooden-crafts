@@ -11,30 +11,31 @@ const fadeIn = keyframes`
 const Data = [
     {
         step: "Step 1",
-        title: "Initial Consultation",
-        description: "Share your ideas and requirements with us through a form or personal consultation. We’ll help refine your vision.",
+        title: "Share Your Idea & Budget",
+        description: "Send us your design and budget through our Contact page or WhatsApp us. We’ll review your requirements carefully.",
     },
     {
         step: "Step 2",
-        title: "Design & Quote",
-        description: "We craft detailed design visuals and offer a transparent quote tailored to your expectations and budget.",
+        title: "Expert Advice",
+        description: "Based on your shared design and budget, we provide guidance and recommendations to help you get the best outcome.",
     },
     {
         step: "Step 3",
-        title: "Handcrafted Production",
-        description: "Our artisans begin crafting your piece using traditional techniques and high-quality materials.",
+        title: "Finalization & Production",
+        description: "Once everything is approved, our expert team begins crafting your product with precision and care.",
     },
     {
         step: "Step 4",
-        title: "Secure Delivery",
-        description: "Your custom piece is securely packaged and delivered to your doorstep with care and attention.",
+        title: "Safe Packaging & Delivery",
+        description: "Your finished product is securely packed and delivered to your doorstep.",
     },
     {
         step: "Step 5",
-        title: "Final Touches",
-        description: "We ensure every detail meets your expectations. Adjustments can be made to ensure your complete satisfaction.",
+        title: "Satisfaction Guaranteed",
+        description: "We stand behind our craftsmanship. If any adjustments are needed, we’ll work with you to ensure complete satisfaction.",
     },
 ];
+
 
 export default function Working() {
     return (

@@ -1,5 +1,5 @@
 import { CONTACT, HEADER_LINKS } from "@/app-config";
-import { Box, Button, Flex, Heading, Input, Text, Textarea } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, Image, Input, Text, Textarea } from "@chakra-ui/react";
 import Link from "next/link";
 import { AiOutlineYoutube } from "react-icons/ai";
 import { CiFacebook } from "react-icons/ci";
@@ -10,8 +10,10 @@ export default function Footer() {
         <Flex color="white" bgColor="app.green" p={10} gap={12} direction={{ base: "column", md: "row" }}>
 
             <Box flex={1}>
-                <Heading mb={4} fontSize="20px" fontWeight="bolder">Wooden Crafts</Heading>
-                <Text mb={4} maxW="300px" fontSize="sm">Handcrafted wooden treasures made with love and precision. Each piece tells a story of nature's beauty and human artistry.</Text>
+                <Link href="/">
+                    {/* <Heading textAlign="center" fontSize="30px" fontWeight="bolder">SHARIQTRADERS</Heading> */}
+                    <Image src="/assets/logo.png" alt="Shariqa Traders Logo" width='300px' mb={5} />
+                </Link>                <Text mb={4} maxW="300px" fontSize="sm">Handcrafted wooden treasures made with love and precision. Each piece tells a story of nature's beauty and human artistry.</Text>
                 <Flex gap={10}>
                     <CiFacebook size={25} />
                     <FaInstagram size={25} />

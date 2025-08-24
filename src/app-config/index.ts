@@ -1,7 +1,7 @@
 
 export const DOMAIN_NAME = "www.shariqatraders.com";
 
-export const SITE_TITLE = ``;
+export const SITE_TITLE = `Shariqat Traders `;
 
 export const SITE_DESCRIPTION = `
 
@@ -12,15 +12,15 @@ export const PAGES = {
     Home: { title: "Home", path: "/", },
     About: { title: "About Us", path: "/about", },
     Contact: { title: "Contact Us", path: "/contact", },
-    Catalog: { title: "Catalog", path: "/catalog", },
+    Shop: { title: "Shop", path: "/shop", },
     CustomOrder: { title: "Custom Order", path: "/custom-order", },
 
 }
 export const HEADER_LINKS = [
-    PAGES.About, PAGES.Catalog, PAGES.CustomOrder, PAGES.Contact
+    PAGES.About, PAGES.Shop, PAGES.CustomOrder, PAGES.Contact
 ]
 export const FOOTER_LINKS = [
-    PAGES.About, PAGES.Catalog, PAGES.CustomOrder, PAGES.Contact
+    PAGES.About, PAGES.Shop, PAGES.CustomOrder, PAGES.Contact
 ]
 
 export const CONTACT = {

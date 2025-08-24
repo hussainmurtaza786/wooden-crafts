@@ -4,7 +4,7 @@ import HomePage from './home/page'
 
 
 export const metadata: Metadata = {
-  title: `${PAGES.Home.title} | ${SITE_TITLE}`,
+  title: `${PAGES.Home.title} - ${SITE_TITLE}`,
   description: SITE_DESCRIPTION,
 };
 

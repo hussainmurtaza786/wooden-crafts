@@ -92,4 +92,15 @@ export const DUMMY_DATA = [
     imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ828jeg4AgfqxluBqE3M3guftkq4VVAB6KzQ&s",
     size: "22*22",
   },
+  {
+    id: "1",
+    slug: "classic-wooden-frame",
+    title: "Classic Wooden Frame",
+    description: "A timeless handcrafted wooden frame with a smooth walnut finish. Perfect for family portraits or wall art display.",
+    material: "Walnut Wood",
+    workType: "Frames",
+    price: 45,
+    imageUrl: "https://images.unsplash.com/photos/a-wooden-frame-with-a-black-and-white-picture-in-it-0UKym2nB78I?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+    size: "12x16",
+  },
 ];

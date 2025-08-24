@@ -6,17 +6,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 export default function Header() {
     return (
-        <Flex
-            color="white"
-            direction="row"
-            gap={5}
-            justify="space-around"
-            bgColor="app.green"
-            py={8}
-            fontSize="18px"
-            w="100%"
-            align="center"
-        >
+        <Flex color="white" direction="row" gap={5} justify="space-around" bgColor="app.green" py={8} fontSize="18px" w="100%" align="center">
             {/* Mobile (hamburger only) */}
             <Box display={{ base: "block", md: "none" }}>
                 <MobileLayout />

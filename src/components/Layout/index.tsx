@@ -6,7 +6,7 @@ import { ReactNode, } from "react";
 import Header from './Header'
 import Footer from './Footer'
 import { Toaster } from "@/components/ui/toaster";
-import ChatBot from "@/app/ChatBot";
+import WhatsappIcon from "../WhatsappIcon";
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
     return (
@@ -15,7 +15,8 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
                 <Provider enableSystem={false}>
                     <Toaster />
                     <Layout>
-                        <ChatBot />
+                        <WhatsappIcon />
+
                         {children}
                     </Layout>
                 </Provider>

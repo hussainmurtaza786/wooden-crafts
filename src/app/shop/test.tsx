@@ -103,7 +103,7 @@ interface product {
 
 function ProductCard({ workType }: product) {
     return (
-        <Grid maxW="1440px" templateColumns={{ base: "repeat(1, 1fr)", sm: "repeat(2, 1fr)", md: "repeat(2, 1fr)",lg:"repeat(3, 1fr)" }} gap={6}>
+        <Grid maxW="1440px" templateColumns={{ base: "repeat(1, 1fr)", sm: "repeat(2, 1fr)", md: "repeat(2, 1fr)", lg: "repeat(3, 1fr)" }} gap={6}>
             {DUMMY_DATA.filter(item => item.workType === workType).map((item) => (
                 <Box key={item.id} bg="white" borderRadius="2xl" boxShadow="md" overflow="hidden" transition="all 0.3s ease"
                     _hover={{
@@ -144,3 +144,4 @@ function ProductCard({ workType }: product) {
         </Grid>
     );
 }
+

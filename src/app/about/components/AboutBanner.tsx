@@ -1,8 +1,6 @@
 'use client'
-import { PAGES } from "@/app-config";
-import { Box, Button, Flex, Heading, Image, Stack, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Image } from "@chakra-ui/react";
 import { keyframes } from "@emotion/react";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 const fadeSlideIn = keyframes`
   0% {

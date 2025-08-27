@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function Contact() {
     return (
         <>
-            <WhyContactUs />
+            {/* <WhyContactUs /> */}
             <ContactPage />
             <FAQs />
         </>

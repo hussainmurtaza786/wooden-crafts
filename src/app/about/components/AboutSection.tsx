@@ -9,9 +9,9 @@ export default function AboutSection() {
         <Flex direction={{ base: 'column', md: 'row' }} justify="space-between" gap="40px" w="100%" h="100%" p={{ base: "6", md: "32" }}>
             <Box bg="white" borderRadius="xl" px="32px" py="28px" boxShadow="lg" transform={{ base: 'none', md: 'rotate(-1deg)' }}>
                 <Stack>
-                    {/* <Heading fontSize="26px" color="teal.700" mb="16px">
+                    <Heading fontSize="26px" color="teal.700" mb="16px">
                         🪵 Introduction
-                    </Heading> */}
+                    </Heading>
                     <Text fontSize="16px" color="gray.700" mb="12px">
                         At <b>Shariq Traders</b>, we specialize in handcrafted wooden art that celebrates tradition and creativity. Each piece carries a unique story shaped by hand and inspired by nature.
                     </Text>
@@ -19,7 +19,8 @@ export default function AboutSection() {
                         Whether it's a decor item or a custom piece, our goal is to add timeless charm to modern spaces.
                     </Text>
                 </Stack>
-            </Box>
+            </Box >
+
 
             <Box bg="white" borderRadius="xl" px="32px" py="28px" boxShadow="lg" transform={{ base: 'none', md: 'rotate(1deg)' }} mt={{ base: '24px', md: '0' }}>
                 <Stack>
@@ -34,7 +35,7 @@ export default function AboutSection() {
                     </Text>
                 </Stack>
             </Box>
-        </Flex>
+        </Flex >
 
     );
 }

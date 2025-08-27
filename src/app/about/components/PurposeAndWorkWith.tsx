@@ -4,11 +4,11 @@ import { Box, Heading, Image, Text, VStack, Stack } from "@chakra-ui/react";
 
 export default function AboutShariq() {
   return (
-    <Box px={{ base: 6, md: 16 }} py={{ base: 16, md: 28 }} bg="#f8f6f2">
-      <VStack maxW="6xl" mx="auto">
+    <Box px={{ base: 6, md: 16 }} py={{ base: 16, md: 28 }} bg="#f8f6f2" userSelect='none'>
+      <VStack maxW="6xl" mx="auto" gap={20}>
 
         {/* Intro Section */}
-        <VStack textAlign="center" maxW="4xl">
+        {/* <VStack textAlign="center" maxW="4xl">
           <Heading fontSize={{ base: "2xl", md: "4xl" }} color="teal.800">
             About Shariq Traders
           </Heading>
@@ -19,10 +19,10 @@ export default function AboutShariq() {
             Our promise is simple: no shortcuts, no replicas — only authentic,
             thoughtful work that lasts.
           </Text>
-        </VStack>
+        </VStack> */}
 
         {/* Commitment to Quality */}
-        <Stack gap='5' direction={{ base: "column", md: "row" }} align="center">
+        <Stack gap='10' direction={{ base: "column", md: "row" }} align="center">
           <Box flex="1">
             <Heading fontSize={{ base: "xl", md: "3xl" }} mb={4} color="teal.800">
               Commitment to Quality
@@ -31,10 +31,13 @@ export default function AboutShariq() {
               From concept to completion, our focus is on precision and excellence.
               Every surface is thoughtfully designed and carefully executed so that
               your space is not just functional, but memorable. We treat each
-              project as a signature — something that carries both beauty and purpose.
+              project as a signature something that carries both beauty and purpose.
             </Text>
           </Box>
-          <Image src="/assets/quality.jpg" alt="Quality Craftsmanship" rounded="xl" shadow="md" flex="1" />
+          <Box flex={1}>
+
+            <Image objectFit='contain' src="https://i5.walmartimages.com/seo/9-PCS-Wooden-Spoons-Cooking-Wooden-Utensils-Cooking-Spatula-Turner-Slotted-Spoon-Wood-Spoon-Set-Kitchen-Essentials-Non-Stick-Cookware-Heat-Resistant_e6440f01-2400-4606-a6fb-d8f8569cf366.93f22e82b602d391ee289484d09cdefc.jpeg" alt="Quality Craftsmanship" rounded="xl" shadow="md" flex="1" />
+          </Box>
         </Stack>
 
         {/* Materials We Use */}
@@ -46,11 +49,13 @@ export default function AboutShariq() {
             <Text fontSize="lg" color="gray.700" lineHeight="1.8">
               We believe good design begins with strong foundations. That’s why we
               select premium, sustainable materials that enhance beauty, durability,
-              and longevity. From eco-friendly composites to innovative finishes,
+              and longevity. From eco friendly composites to innovative finishes,
               every choice reflects our dedication to both quality and responsibility.
             </Text>
           </Box>
-          <Image src="/assets/wood-sample.webp" w='400px' alt="Materials" rounded="xl" shadow="md" flex="1" />
+          <Box flex={1}>
+            <Image src="/assets/wood-sample.png" alt="Materials" rounded="xl" shadow="md" flex="1" />
+          </Box>
         </Stack>
 
         {/* What Sets Us Apart */}
@@ -62,41 +67,45 @@ export default function AboutShariq() {
             <Text fontSize="lg" color="gray.700" lineHeight="1.8">
               Our approach blends artistry with innovation. Every design starts as
               a vision, refined through sketches, 3D modeling, and meticulous detailing.
-              The result is not just a wall — but a statement piece that carries
+              The result is not just a wall but a statement piece that carries
               identity, soul, and timeless value.
             </Text>
           </Box>
-          <Image src="/assets/different-design.jpg" w='400px' alt="Unique Designs" rounded="xl" shadow="md" flex="1" />
+
+          <Box flex={1}>
+            <Image src="/assets/different-design.jpg" alt="Unique Designs" rounded="xl" shadow="md" flex="1" />
+          </Box>
+
         </Stack>
 
         {/* Client Stories */}
-        <Stack gap='5' direction={{ base: "column", md: "row-reverse" }} align="center">
+        {/* <Stack gap='5' direction={{ base: "column", md: "row-reverse" }} align="center">
           <Box flex="1">
             <Heading fontSize={{ base: "xl", md: "3xl" }} mb={4} color="teal.800">
               Voices of Satisfaction
             </Heading>
             <Text fontSize="lg" color="gray.700" lineHeight="1.8">
-              Our clients describe their journey with us as more than design —
-              it’s transformation. From homes to businesses, the stories they share
+              Our clients describe their journey with us as more than design it’s transformation. From homes to businesses, the stories they share
               reflect the impact of designs that last, serve, and inspire.
               Their satisfaction remains our greatest achievement.
             </Text>
           </Box>
           <Image src="/assets/happy-client.webp" w='400px' alt="Happy Client" rounded="xl" shadow="md" flex="1" />
-        </Stack>
+        </Stack> */}
 
         {/* Closing Statement */}
         <VStack gap='5' textAlign="center" maxW="4xl">
           <Heading fontSize={{ base: "xl", md: "3xl" }} color="teal.800">
-            Our Essence
+            Be a Part of It
           </Heading>
           <Text fontSize="lg" color="gray.700" lineHeight="1.8">
-            Every groove holds memory. Every texture carries vision. What we
-            build is not just for today, but for the generations who will
-            experience it tomorrow. This is our heritage in the making —
-            and you’re part of that story.
+            Every design we create is built to inspire and last. With quality, detail,
+            and care at the core, we turn spaces into stories worth experiencing.
+            Why wait? Step into our world today.
           </Text>
         </VStack>
+
+
 
       </VStack>
     </Box>

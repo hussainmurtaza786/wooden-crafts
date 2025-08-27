@@ -1,6 +1,6 @@
 'use client'
 import { HEADER_LINKS } from "@/app-config";
-import { Box, Button, CloseButton, Drawer, Flex, Heading, Image, Portal } from "@chakra-ui/react";
+import { Box, Button, CloseButton, Drawer, Flex, Heading, Image, Portal, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
 
@@ -11,7 +11,6 @@ export default function Header() {
             <Box display={{ base: "block", md: "none" }}>
                 <MobileLayout />
             </Box>
-
             {/* Logo */}
             <Link href="/">
                 <Image px={5} src="/assets/logo.png" alt="Shariq Traders Logo" width="100%" />
@@ -21,7 +20,30 @@ export default function Header() {
             <Box display={{ base: "none", md: "block" }}>
                 <Flex gap={10} direction="row" justify="center" align="center">
                     {HEADER_LINKS.map((item, idx) => (
-                        <Link key={idx} href={item.path}> {item.title} </Link>
+                        <Link key={idx} href={item.path}>   <Text
+                            position="relative"
+                            color="gray.100"
+                            fontWeight="medium"
+                            _hover={{
+                                color: "#E6B325", // gold accent on hover
+                                _after: {
+                                    width: "100%",
+                                },
+                            }}
+                            transition="all 0.3s ease"
+                            _after={{
+                                content: '""',
+                                position: "absolute",
+                                bottom: "-3px",
+                                left: 0,
+                                width: "0%",
+                                height: "2px",
+                                bg: "#E6B325",
+                                transition: "all 0.3s ease",
+                            }}
+                        >
+                            {item.title}
+                        </Text></Link>
                     ))}
                 </Flex>
             </Box>

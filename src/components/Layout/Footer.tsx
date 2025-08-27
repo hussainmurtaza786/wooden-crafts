@@ -15,9 +15,9 @@ export default function Footer() {
                     <Image src="/assets/logo.png" alt="Shariqa Traders Logo" width='300px' mb={5} />
                 </Link>                <Text mb={4} maxW="300px" fontSize="sm">Handcrafted wooden treasures made with love and precision. Each piece tells a story of nature's beauty and human artistry.</Text>
                 <Flex gap={10}>
-                    <CiFacebook size={25} />
-                    <FaInstagram size={25} />
-                    <AiOutlineYoutube size={25} />
+                    <Link href='https://www.instagram.com/shariqtraders?igsh=eG9zOHJjcWM0ZWJt' target="_blank">
+                        <FaInstagram size={25} />
+                    </Link>
                 </Flex>
             </Box>
             <Box flex={1}>
@@ -31,9 +31,9 @@ export default function Footer() {
             <Box flex={1}>
                 <Heading mb={4} fontSize="20px" fontWeight="bolder">Contact Information</Heading>
                 <Box gap={3}>
-                    <Text> {CONTACT.phone}</Text>
-                    <Text> {CONTACT.email}</Text>
-                    <Text> {CONTACT.shopNo}</Text>
+                    <Text>Phone No: {CONTACT.phone}</Text>
+                    <Text>Email: {CONTACT.email}</Text>
+                    {/* <Text> {CONTACT.shopNo}</Text> */}
 
                 </Box>
             </Box>

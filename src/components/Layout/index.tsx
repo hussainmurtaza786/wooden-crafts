@@ -15,9 +15,8 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
                 <Provider enableSystem={false}>
                     <Toaster />
                     <Layout>
-                        <WhatsappIcon />
-
                         {children}
+                        <WhatsappIcon />
                     </Layout>
                 </Provider>
             </body>

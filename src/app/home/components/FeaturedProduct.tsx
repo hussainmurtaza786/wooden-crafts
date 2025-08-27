@@ -12,39 +12,39 @@ export default function FeaturedProduct() {
     const [hasAnimated, setHasAnimated] = useState(false);
     const titleRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const hasAnimatedBefore = sessionStorage.getItem("featuredProductAnimated");
+    useEffect(() => {
+        const hasAnimatedBefore = sessionStorage.getItem("featuredProductAnimated");
 
-    if (hasAnimatedBefore) {
-        setDisplayedTitle(fullText); // Show full title instantly
-        setHasAnimated(true);
-        return;
-    }
+        if (hasAnimatedBefore) {
+            setDisplayedTitle(fullText); // Show full title instantly
+            setHasAnimated(true);
+            return;
+        }
 
-    const observer = new IntersectionObserver(
-        ([entry]) => {
-            if (entry.isIntersecting && !hasAnimated) {
-                let index = 0;
-                const interval = setInterval(() => {
-                    setDisplayedTitle(fullText.slice(0, index + 1));
-                    index++;
-                    if (index === fullText.length) {
-                        clearInterval(interval);
-                        sessionStorage.setItem("featuredProductAnimated", "true");
-                    }
-                }, 100);
-                setHasAnimated(true);
-            }
-        },
-        { threshold: 0.7 }
-    );
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting && !hasAnimated) {
+                    let index = 0;
+                    const interval = setInterval(() => {
+                        setDisplayedTitle(fullText.slice(0, index + 1));
+                        index++;
+                        if (index === fullText.length) {
+                            clearInterval(interval);
+                            sessionStorage.setItem("featuredProductAnimated", "true");
+                        }
+                    }, 100);
+                    setHasAnimated(true);
+                }
+            },
+            { threshold: 0.7 }
+        );
 
-    if (titleRef.current) observer.observe(titleRef.current);
+        if (titleRef.current) observer.observe(titleRef.current);
 
-    return () => {
-        if (titleRef.current) observer.unobserve(titleRef.current);
-    };
-}, [hasAnimated]);
+        return () => {
+            if (titleRef.current) observer.unobserve(titleRef.current);
+        };
+    }, [hasAnimated]);
 
     return (
         <Flex justify="center" align="center" direction="column" py={{ base: "60px", md: "100px" }} px={{ base: "20px", md: "40px" }}>
@@ -77,11 +77,11 @@ export default function FeaturedProduct() {
                     </Text>
 
 
-                    <Link href={PAGES.Catalog.path}>
+                    {/* <Link href={PAGES.Catalog.path}>
                         <Button bgColor="#5e3a1c" color="white" px={6} py={4} fontSize="md" rounded="md" _hover={{ bg: "#714625" }}>
                             Order Now
                         </Button>
-                    </Link>
+                    </Link> */}
                 </Box>
 
                 <Image src="/assets/featured-product.png" alt="Featured Product" borderRadius="2xl" boxShadow="2xl" maxH="500px" />

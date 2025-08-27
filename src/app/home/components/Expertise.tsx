@@ -21,7 +21,7 @@ const expertiseData = [
     {
         id: "kitchen-items",
         title: "Kitchen Items",
-        image: "https://i5.walmartimages.com/seo/9-PCS-Wooden-Spoons-Cooking-Wooden-Utensils-Cooking-Spatula-Turner-Slotted-Spoon-Wood-Spoon-Set-Kitchen-Essentials-Non-Stick-Cookware-Heat-Resistant_e6440f01-2400-4606-a6fb-d8f8569cf366.93f22e82b602d391ee289484d09cdefc.jpeg",
+        image: "/assets/quality.webp",
         description:
             "Premium wooden kitchenware including cutting boards, utensils, and serving trays for a touch of craftsmanship."
     },

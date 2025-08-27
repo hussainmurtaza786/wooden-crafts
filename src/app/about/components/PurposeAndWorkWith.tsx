@@ -36,7 +36,7 @@ export default function AboutShariq() {
           </Box>
           <Box flex={1}>
 
-            <Image objectFit='contain' src="https://i5.walmartimages.com/seo/9-PCS-Wooden-Spoons-Cooking-Wooden-Utensils-Cooking-Spatula-Turner-Slotted-Spoon-Wood-Spoon-Set-Kitchen-Essentials-Non-Stick-Cookware-Heat-Resistant_e6440f01-2400-4606-a6fb-d8f8569cf366.93f22e82b602d391ee289484d09cdefc.jpeg" alt="Quality Craftsmanship" rounded="xl" shadow="md" flex="1" />
+            <Image objectFit='contain' src="/assets/quality.webp" alt="Quality Craftsmanship" rounded="xl" shadow="md" flex="1" />
           </Box>
         </Stack>
 

@@ -14,7 +14,7 @@ const expertiseData = [
     {
         id: "decor",
         title: "Decor",
-        image: "https://images.woodenstreet.de/wsnew2024/static-webmedia/images/home-decor/icon1.jpg",
+        image: "/assets/decor.jpg",
         description:
             "Stylish wooden décor pieces designed to bring a natural charm and unique character to any room."
     },

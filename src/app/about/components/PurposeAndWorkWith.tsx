@@ -34,7 +34,7 @@ export default function AboutShariq() {
               project as a signature something that carries both beauty and purpose.
             </Text>
           </Box>
-          <Box flex={1}>
+          <Box flex={1} maxW='400px'>
 
             <Image objectFit='contain' src="/assets/quality.webp" alt="Quality Craftsmanship" rounded="xl" shadow="md" flex="1" />
           </Box>
@@ -53,7 +53,7 @@ export default function AboutShariq() {
               every choice reflects our dedication to both quality and responsibility.
             </Text>
           </Box>
-          <Box flex={1}>
+          <Box flex={1} maxW='400px'>
             <Image src="/assets/wood-sample.png" alt="Materials" rounded="xl" shadow="md" flex="1" />
           </Box>
         </Stack>
@@ -72,7 +72,7 @@ export default function AboutShariq() {
             </Text>
           </Box>
 
-          <Box flex={1}>
+          <Box flex={1} maxW='450px'>
             <Image src="/assets/different-design.jpg" alt="Unique Designs" rounded="xl" shadow="md" flex="1" />
           </Box>
 

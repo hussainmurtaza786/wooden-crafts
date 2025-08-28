@@ -80,7 +80,7 @@ export default function HeroSection() {
             </Box>
 
             <Box userSelect="none">
-                <Image maxW="100%" src={current.image} alt={current.title} />
+                <Image maxW="100%" maxH='550px' src={current.image} alt={current.title} />
             </Box>
         </Flex>
     );

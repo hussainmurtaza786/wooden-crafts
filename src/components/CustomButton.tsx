@@ -12,7 +12,7 @@ interface CustomButtonProps {
 export default function CustomButton({ children, px, py }: CustomButtonProps) {
     return (
         <Button
-            bgGradient="to-r" gradientFrom="#5e3a1c" gradientTo="app.green"
+            bgGradient="to-r" gradientFrom="app.brown" gradientTo="app.green"
             backgroundSize="200% 100%"
             backgroundPosition="left bottom"
             color="white"

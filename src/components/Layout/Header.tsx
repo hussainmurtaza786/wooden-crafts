@@ -25,7 +25,7 @@ export default function Header() {
                             color="gray.100"
                             fontWeight="medium"
                             _hover={{
-                                color: "#E6B325", // gold accent on hover
+                                color: "app.brown", // gold accent on hover
                                 _after: {
                                     width: "100%",
                                 },
@@ -38,7 +38,7 @@ export default function Header() {
                                 left: 0,
                                 width: "0%",
                                 height: "2px",
-                                bg: "#E6B325",
+                                bg: "app.brown",
                                 transition: "all 0.3s ease",
                             }}
                         >

@@ -70,7 +70,7 @@ export default function FieldOfExpertise() {
 
     return (
         <Box w="100%" py={{ base: 10, md: 20 }} px={{ base: 4, md: 8 }} bg="#fffaf5">
-            <Heading textAlign="center" fontSize={{ base: "2xl", md: "4xl" }} fontWeight="bold" color="#5e3a1c" mb={10}>
+            <Heading textAlign="center" fontSize={{ base: "2xl", md: "4xl" }} fontWeight="bold" color="app.brown" mb={10}>
                 Our Field of Expertise
             </Heading>
 
@@ -85,7 +85,7 @@ export default function FieldOfExpertise() {
 
                         {/* Content */}
                         <Box p={5}>
-                            <Heading fontSize="xl" mb={3} color="#5e3a1c">
+                            <Heading fontSize="xl" mb={3} color="app.brown">
                                 {item.title}
                             </Heading>
                             <Text fontSize="md" color="gray.600" mb={5}>

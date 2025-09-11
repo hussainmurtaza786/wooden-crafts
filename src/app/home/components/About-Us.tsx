@@ -13,28 +13,21 @@ export default function AboutUs() {
 
                 {/* Text Section */}
                 <Box flex="1">
-                    <Heading fontSize={{ base: "2xl", md: "4xl" }} fontWeight="bold" color="#5e3a1c" mb={4}>
+                    <Heading fontSize={{ base: "2xl", md: "4xl" }} fontWeight="bold" color="app.brown" mb={4}>
                         About SHARIQTRADERS
                     </Heading>
 
                     <Text fontSize={{ base: "md", md: "lg" }} color="#4a3b2a" lineHeight="1.8" mb={6}>
-                        At <b>Shariqa Traders</b>, we bring the timeless charm of wood to your
-                        home and business no matter where you are in the world. From elegant
-                        tables and chairs to intricate 3D wooden art, handcrafted utensils, and
-                        home decor, our collection is designed to inspire and impress.
-                        <br />
-                        <br />
-                        We offer <b>custom wooden designs</b> tailored to your vision,
-                        ensuring <b>quality craftsmanship</b> and <b>100% satisfaction</b> with
-                        every order. Whether you’re looking for a unique statement piece,
-                        kitchen essentials, or a rare collectible, we’re here to deliver
-                        <b> right to your door, globally</b>.
+                        At <b>Shariq Traders</b>, we bring the timeless charm of wood to your home or business, no matter where you are in the world. From stylish chairs to intricate 3D wooden art, handcrafted utensils, custom frames, and home décor, our collection is designed to inspire and impress.
+                        <br /><br />
+                        We create <b>custom wooden designs</b> tailored to your vision, delivering <b>quality craftsmanship</b> and <b>100% satisfaction</b> with every order. Whether you’re looking for a unique statement piece, functional kitchen essentials, or a rare collectible, we deliver <b>worldwide with care</b>.
+
                     </Text>
 
                     <VStack align="start">
                         <Link href="/about">
                             <CustomButton children='Read More' px={8} py={4} />
-                            {/* <Button bg="#5e3a1c" color="white" px={8} py={6} fontSize="md" rounded="full"
+                            {/* <Button bg="app.brown" color="white" px={8} py={6} fontSize="md" rounded="full"
                                 _hover={{
                                     bg: "#714625",
                                     transform: "scale(1.05)",

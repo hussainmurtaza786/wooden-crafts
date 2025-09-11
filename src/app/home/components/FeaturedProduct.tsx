@@ -78,7 +78,7 @@ export default function FeaturedProduct() {
 
 
                     {/* <Link href={PAGES.Catalog.path}>
-                        <Button bgColor="#5e3a1c" color="white" px={6} py={4} fontSize="md" rounded="md" _hover={{ bg: "#714625" }}>
+                        <Button bgColor="app.brown" color="white" px={6} py={4} fontSize="md" rounded="md" _hover={{ bg: "#714625" }}>
                             Order Now
                         </Button>
                     </Link> */}

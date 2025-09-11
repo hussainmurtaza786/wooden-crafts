@@ -2,11 +2,11 @@
 export const DOMAIN_NAME = "www.shariqatraders.com";
 
 export const SITE_TITLE = `Shariq Traders `;
+export const SITE_DESCRIPTION = `Shariq Traders specializes in CNC wood designs, handmade wooden items, laser cutting, custom frames, 
+furniture, kitchenware, doors, wall panels, and 3D wooden designs. We deliver high-quality products with fast service, bulk order options,
+ and custom designs tailored to your needs. Serving both individual customers and businesses worldwide, we focus on craftsmanship, reliability,
+  and customer satisfaction.`;
 
-export const SITE_DESCRIPTION = `Shariq Traders offers a wide range of custom wooden furniture, decor, frames, kitchenware, doors, 
-wall panels, and 3D designs. We provide high quality products, fast delivery, and bulk order discounts, with the option to create
- custom designs based on your requirements. Serving both retailers and businesses worldwide, we are committed to reliability, flexibility, 
-and complete customer satisfaction.`;
 
 
 
@@ -20,10 +20,10 @@ export const PAGES = {
 
 }
 export const HEADER_LINKS = [
-    PAGES.About, PAGES.Shop, PAGES.Contact //PAGES.CustomOrder, 
+    PAGES.About, PAGES.Shop, PAGES.Contact,
 ]
 export const FOOTER_LINKS = [
-    PAGES.About, PAGES.Shop, PAGES.Contact //, PAGES.CustomOrder
+    PAGES.About, PAGES.Shop, PAGES.Contact,
 ]
 
 export const CONTACT = {

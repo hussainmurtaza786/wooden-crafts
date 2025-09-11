@@ -4,7 +4,7 @@ import HomePage from './home/page'
 
 
 export const metadata: Metadata = {
-  title: `Custom Wooden Furniture, Decor & Frames | - ${SITE_TITLE}`,
+  title: `CNC Wood Designs, Handmade Wooden Items & Furniture | - ${SITE_TITLE}`,
   description: SITE_DESCRIPTION,
 };
 

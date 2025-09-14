@@ -34,15 +34,6 @@ export default function AboutUs() {
                     <VStack align="start">
                         <Link href="/about">
                             <CustomButton children='Read More' px={8} py={4} />
-                            {/* <Button bg="#5e3a1c" color="white" px={8} py={6} fontSize="md" rounded="full"
-                                _hover={{
-                                    bg: "#714625",
-                                    transform: "scale(1.05)",
-                                    transition: "all 0.3s ease",
-                                }}
-                                _active={{ transform: "scale(0.98)" }}
-                            >
-                            </Button> */}
                         </Link>
                     </VStack>
                 </Box>

@@ -13,12 +13,12 @@ export default function CustomButton({ children, px, py }: CustomButtonProps) {
     return (
         <Button
             bgGradient="to-r" gradientFrom="app.brown" gradientTo="app.green"
-            backgroundSize="200% 100%"
-            backgroundPosition="left bottom"
             color="white"
             transition="all 0.5s ease"
             _hover={{
-                backgroundPosition: "right bottom",
+                backgroundPosition: "right",
+                gradientFrom: "app.green", gradientTo: "app.brown",
+                boxShadow: "lg",
             }}
             px={px}
             py={py}

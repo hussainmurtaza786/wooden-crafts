@@ -16,14 +16,15 @@ export const PAGES = {
     About: { title: "About Us", path: "/about", },
     Contact: { title: "Contact Us", path: "/contact", },
     Shop: { title: "Shop", path: "/shop", },
-    // CustomOrder: { title: "Custom Order", path: "/custom-order", },
+    Blogs: { title: "Blogs", path: "/blogs", },
+    CustomOrder: { title: "Custom Order", path: "/custom-order", },
 
 }
 export const HEADER_LINKS = [
-    PAGES.About, PAGES.Shop, PAGES.Contact,
+    PAGES.About, PAGES.Shop, PAGES.Contact, PAGES.Blogs, PAGES.CustomOrder
 ]
 export const FOOTER_LINKS = [
-    PAGES.About, PAGES.Shop, PAGES.Contact,
+    PAGES.About, PAGES.Shop, PAGES.Contact, PAGES.Blogs, PAGES.CustomOrder
 ]
 
 export const CONTACT = {

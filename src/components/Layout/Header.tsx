@@ -55,7 +55,7 @@ function MobileLayout() {
     return (
         <Drawer.Root>
             <Drawer.Trigger asChild>
-                <Button variant="outline" size="sm">
+                <Button variant="outline" size="sm" mx={3} _focus={{ bg: "transparent" }} _active={{ bg: "transparent" }} _expanded={{ bg: "transparent" }}>
                     <GiHamburgerMenu />
                 </Button>
             </Drawer.Trigger>

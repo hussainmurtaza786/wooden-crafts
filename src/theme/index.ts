@@ -17,8 +17,7 @@ const config = defineConfig({
                 app: {
                     black: { value: '#000' },
                     white: { value: '#fff' },
-                    brown: { value: '#cfb3a6' },
-                    brown1: { value: '#5e3a1c' },
+                    brown: { value: '#5e3a1c' },
                     green: { value: '#23392C' },
                 },
 

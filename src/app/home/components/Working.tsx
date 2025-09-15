@@ -40,7 +40,7 @@ const Data = [
 export default function Working() {
     return (
         <Box py={16} px={4} bg="gray.50">
-            <Heading fontSize={{ base: "2xl", md: "4xl" }} textAlign="center" mb={4} color="#5e3a1c">
+            <Heading fontSize={{ base: "2xl", md: "4xl" }} textAlign="center" mb={4} color="app.brown">
                 How It Works
             </Heading>
 
@@ -52,7 +52,7 @@ export default function Working() {
                 <Box position="absolute" top={0} left="50%" transform="translateX(-50%)" height="100%" width="2px" bg="gray.300" />
                 {Data.map((item, idx) => (
                     <Flex key={idx} direction={{ base: "column", md: idx % 2 === 0 ? "row" : "row-reverse" }} align="center" gap={6} py={8} px={4} w="full" css={css`              animation: ${fadeIn} 0.6s ease ${idx * 0.1}s both;            `}>
-                        <Circle size="10" bg="#5e3a1c" color="white" fontWeight="bold">
+                        <Circle size="10" bg="app.brown" color="white" fontWeight="bold">
                             {idx + 1}
                         </Circle>
                         <Box bg="white" p={6} borderRadius="xl" boxShadow="lg" maxW="400px" textAlign="left">

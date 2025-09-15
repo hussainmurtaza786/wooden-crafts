@@ -37,7 +37,7 @@ export default function Vision() {
 
     return (
         <Box ref={sectionRef} px={4} py={16} bg="gray.50">
-            <Heading fontSize="5xl" lineHeight="1.2" fontFamily="alice" textAlign="center" mb={10} color="#5e3a1c">
+            <Heading fontSize="5xl" lineHeight="1.2" fontFamily="alice" textAlign="center" mb={10} color="app.brown">
                 Bring Your Vision to Life
             </Heading>
 
@@ -65,7 +65,7 @@ export default function Vision() {
                                 : undefined
                         }
                     >
-                        <Box fontSize="3xl" mb={3} color="#5e3a1c">
+                        <Box fontSize="3xl" mb={3} color="app.brown">
                             {item.icon}
                         </Box>
                         <Text fontSize="xl" mb={2}>

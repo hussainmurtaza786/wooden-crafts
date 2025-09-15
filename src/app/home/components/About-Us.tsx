@@ -13,7 +13,7 @@ export default function AboutUs() {
 
                 {/* Text Section */}
                 <Box flex="1">
-                    <Heading fontSize={{ base: "2xl", md: "4xl" }} fontWeight="bold" color="#5e3a1c" mb={4}>
+                    <Heading fontSize={{ base: "2xl", md: "4xl" }} fontWeight="bold" color="app.brown" mb={4}>
                         About SHARIQTRADERS
                     </Heading>
 

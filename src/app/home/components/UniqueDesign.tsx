@@ -76,7 +76,7 @@ export default function UniqueDesign() {
                             <Box minW="full" borderLeft="2px solid black">
                                 <Text mb={2} fontSize="lg" px="4" lineHeight="40px" fontWeight="400">Discover unique wooden creations where each piece is a natural masterpiece.</Text>
                                 {/* <Link href={PAGES.Catalog.path}>
-                                    <Button mx={4} bgColor="#5e3a1c" color="white" px={6} py={4} fontSize="md" rounded="md" _hover={{ bg: "#714625" }}>
+                                    <Button mx={4} bgColor="app.brown" color="white" px={6} py={4} fontSize="md" rounded="md" _hover={{ bg: "#714625" }}>
                                         Explore the Craft
                                     </Button>
                                 </Link> */}

@@ -5,13 +5,14 @@ import ExplorePanel from "./components/ExplorePanel";
 import AboutSection from "./components/AboutSection";
 import PurposeAndWork from "./components/PurposeAndWorkWith";
 import { Metadata } from "next";
-import { PAGES, SITE_DESCRIPTION, SITE_TITLE } from "@/app-config";
-
+import { SITE_TITLE } from "@/app-config";
 
 export const metadata: Metadata = {
-    title: `${PAGES.About.title} - ${SITE_TITLE}`,
-    description: SITE_DESCRIPTION,
+    title: `About ${SITE_TITLE} | Custom Wooden Art, CNC Cutting & Global Trading`,
+    description: `${SITE_TITLE} specializes in CNC wood cutting, handmade 3D wooden artwork, home décor, kitchen items, furniture, and laser cutting. Based in Karachi, we also export worldwide with custom order designs.`,
 };
+
+
 
 
 

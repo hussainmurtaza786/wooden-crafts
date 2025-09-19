@@ -1,4 +1,12 @@
 import { Box, Container, Heading, Text, VStack, HStack, Avatar, Image, } from "@chakra-ui/react";
+import { Metadata } from "next";
+import { SITE_TITLE } from "@/app-config";
+
+export const metadata: Metadata = {
+    title: `Wooden Design Ideas, CNC Cutting Guides & Home Décor Tips | ${SITE_TITLE} Blogs`,
+    description: `Read the latest blogs from ${SITE_TITLE} about CNC wood cutting, handmade wooden artwork, home décor inspiration, kitchenware, furniture, custom designs, and global wooden design trends.`,
+};
+
 
 export default function BlogsPage() {
     return (
